@@ -33,14 +33,14 @@
     <header class="header sticky-header border-less border-gray">
         <div class="container-fluid">
             <div class="logo">
-                <a href="" title="Alfakitab - Online kitab mağazası">
+                <a href="{{ route('home_page') }}" title="Alfakitab - Online kitab mağazası">
                     <img src="{{ asset('images/front/images/logo-index.png') }}" alt="Alfakitab">
                 </a>
             </div><!-- End .logo -->
 
             <nav class="menu-container">
                 <ul class="menu">
-                    <li><a href="index.html">ANA SƏHİFƏ</a></li>
+                    <li><a href="{{ route('home_page') }}">ANA SƏHİFƏ</a></li>
                     <li><a href="#">kİTAB SAT</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">HAQQIMIZDA</a></li>
@@ -62,25 +62,7 @@
                 </a>
 
                 <form action="#" class="header-search-form">
-                    <div class="dropdown search-dropdown">
-                        <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            All Categories
-                            <i class="fa fa-arrow-down"></i>
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Computers</a></li>
-                            <li><a href="#">Software</a></li>
-                            <li><a href="#">Televisions</a></li>
-                            <li><a href="#">Audio &amp; Video</a></li>
-                            <li><a href="#">Cell Phones</a></li>
-                            <li><a href="#">home appliance</a></li>
-                            <li><a href="#">Cameras &amp; Photo</a></li>
-                            <li><a href="#">Featured Sales</a></li>
-                            <li><a href="#">Liquidations</a></li>
-                        </ul><!-- End .dropdown -->
-                    </div><!-- End .dropdown -->
-                    <input type="search" class="form-control" required>
+                    <input type="search" class="form-control" required placeholder="Axtar : Corc Oruel - Heyvanıstan">
                     <button type="submit" class="btn">
                         <i class="fa fa-search"></i>
                     </button>
@@ -131,7 +113,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="{{ route('login_page') }}">
                                         <i class="fa fa-lock"></i>
                                         <span>Daxil ol və ya Qeydiyyatdan keç</span>
                                     </a>

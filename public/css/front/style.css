@@ -4284,7 +4284,7 @@ select.form-control.input-lg {
 .header-search-container .form-control {
   height: 36px;
   font-size: 13px;
-  padding: 10.5px 66px 7.5px 150px;
+  /*padding: 10.5px 66px 7.5px 150px;*/
   color: #666;
   border: none;
   margin: 0;
@@ -4294,7 +4294,7 @@ select.form-control.input-lg {
 
 @media (min-width: 992px) {
   .header-search-container .form-control {
-    padding-left: 190px;
+    /*padding-left: 190px;*/
   }
 }
 
