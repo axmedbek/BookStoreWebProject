@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{{ asset('css/front/settings.css') }}">
     <link rel="stylesheet" href="{{ asset('css/front/navigation.css') }}">
     <link rel="stylesheet" href="{{ asset('css/front/style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     @yield("css")
 </head>
 <body>
@@ -39,446 +40,32 @@
 
             <nav class="menu-container">
                 <ul class="menu">
-                    <li>
-                        <a href="index.html">Home</a>
-                        <ul>
-                            <li><a href="index.html">Home Version 1</a></li>
-                            <li><a href="index2.html">Home Version 2</a></li>
-                            <li><a href="index3.html">Home Version 3</a></li>
-                            <li><a href="index4.html">Home Version 4</a></li>
-                            <li><a href="index5.html">Home Version 5</a></li>
-                            <li><a href="index6.html">Home Version 6</a></li>
-                            <li><a href="index7.html">Home Version 7</a></li>
-                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                        </ul>
-                    </li>
-                    <li class="mmenu-container"><a href="#">Shop</a>
-                        <div class="megamenu">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="mmenu-title">Clothing</div><!-- End .mmenu-title -->
-                                        <ul>
-                                            <li><a href="#">Dresses</a></li>
-                                            <li><a href="#">Jeans &amp; Trousers </a></li>
-                                            <li><a href="#">Blouses &amp; Shirts</a></li>
-                                            <li><a href="#">Tops &amp; T-Shirts</a></li>
-                                            <li><a href="#">Jackets &amp; Coats</a></li>
-                                            <li><a href="#">Skirts</a></li>
-                                        </ul>
-                                    </div><!-- End .col-5 -->
-                                    <div class="col-5">
-                                        <div class="mmenu-title">Shoes</div><!-- End .mmenu-title -->
-                                        <ul>
-                                            <li>
-                                                <a href="#"><span>Formal Shoes<span class="tip">New</span></span></a>
-                                            </li>
-                                            <li><a href="#">Casual Shoes</a></li>
-                                            <li><a href="#"><span>Sandals<span class="tip">New</span></span></a></li>
-                                            <li><a href="#"><span>Boots<span class="tip">New</span></span></a></li>
-                                            <li><a href="#">Wide Fit</a></li>
-                                            <li><a href="#">Slippers</a></li>
-                                        </ul>
-                                    </div><!-- End .col-5 -->
-                                    <div class="col-5">
-                                        <div class="mmenu-title">ACCESSORIES</div><!-- End .mmenu-title -->
-                                        <ul>
-                                            <li><a href="#"><span>Bags &amp; Purses<span class="tip hot">Hot</span></span></a></li>
-                                            <li><a href="#">Belts</a></li>
-                                            <li><a href="#"><span>Gloves<span class="tip hot">Hot</span></span></a></li>
-                                            <li><a href="#"><span>Jewellery<span class="tip hot">Hot</span></span></a></li>
-                                            <li><a href="#">Sunglasses</a></li>
-                                            <li><a href="#">Hair Accessories</a></li>
-                                        </ul>
-                                    </div><!-- End .col-5 -->
-                                    <div class="col-5">
-                                        <div class="mmenu-title">Sports</div><!-- End .mmenu-title -->
-                                        <ul>
-                                            <li><a href="#">Sport Tops &amp; Vests</a></li>
-                                            <li><a href="#">Hoodies</a></li>
-                                            <li><a href="#">Swimwear</a></li>
-                                            <li><a href="#">FootWear</a></li>
-                                            <li><a href="#">Sports Underwear</a></li>
-                                            <li><a href="#">Bags</a></li>
-                                        </ul>
-                                    </div><!-- End .col-5 -->
-                                    <div class="col-5">
-                                        <div class="banner">
-                                            <a href="#" title="Banner title">
-                                                <img src="{{ asset('images/front/images/banners/header/banner1.jpg') }}" alt="Banner">
-                                            </a>
-                                        </div><!-- End .banner -->
-                                    </div><!-- End .col-5 -->
-                                </div><!-- End .row -->
-
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="banner">
-                                            <a href="#" title="Banner title">
-                                                <img src="{{ asset('images/front/images/banners/header/banner2.jpg') }}" alt="Banner">
-                                            </a>
-                                        </div><!-- End .banner -->
-                                    </div><!-- End .col-sm-4 -->
-
-                                    <div class="col-sm-4">
-                                        <div class="banner">
-                                            <a href="#" title="Banner title">
-                                                <img src="{{ asset('images/front/images/banners/header/banner3.jpg') }}" alt="Banner">
-                                            </a>
-                                        </div><!-- End .banner -->
-                                    </div><!-- End .col-sm-4 -->
-
-                                    <div class="col-sm-4">
-                                        <div class="banner">
-                                            <a href="#" title="Banner title">
-                                                <img src="{{ asset('images/front/images/banners/header/banner4.jpg') }}" alt="Banner">
-                                            </a>
-                                        </div><!-- End .banner -->
-                                    </div><!-- End .col-sm-4 -->
-                                </div><!-- End .row -->
-                            </div><!-- End .container -->
-                        </div><!-- End .megamenu -->
-                    </li>
-                    <li><a href="#">Pages</a>
-                        <ul>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="#">Category Grid</a>
-                                <ul>
-                                    <li><a href="category.html">Category</a></li>
-                                    <li><a href="category-2col.html">Two Columns</a></li>
-                                    <li><a href="category-3col.html">Three Columns</a></li>
-                                    <li><a href="category-left-sidebar.html">Category - Left Sidebar</a></li>
-                                    <li><a href="category-left-sidebar-2col.html">Left Sidebar Two Col</a></li>
-                                    <li><a href="category-left-sidebar-3col.html">Left Sidebar Three Col</a></li>
-                                    <li><a href="category-fullwidth-3col.html">Fullwidth Three Col</a></li>
-                                    <li><a href="category-fullwidth-4col.html">Fullwidth Four Col</a></li>
-                                    <li><a href="category-fullwidth-5col.html">Fullwidth Five Col</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Category List</a>
-                                <ul>
-                                    <li><a href="category-list.html">Category List</a></li>
-                                    <li><a href="category-list-left-sidebar.html">List - Left Sidebar</a></li>
-                                    <li><a href="category-list-right-sidebar.html">List - Right Sidebar</a></li>
-                                    <li><a href="category-list-box.html">Category ListBox</a></li>
-                                    <li><a href="category-list-box-left-sidebar.html">ListBox - Left Sidebar</a></li>
-                                    <li><a href="category-list-box-right-sidebar.html">ListBox - Right Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Product</a>
-                                <ul>
-                                    <li><a href="product.html">Product Version 1</a></li>
-                                    <li><a href="product2.html">Product Version 2</a></li>
-                                    <li><a href="product3.html">Product Version 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="cart.html">Shopping Cart</a></li>
-                            <li><a href="compare.html">Compare Products</a></li>
-                            <li><a href="checkout.html">Checkout Page</a></li>
-                            <li><a href="#">Contact</a>
-                                <ul>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="contact2.html">Contact Us 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="404.html">404</a></li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="register.html">Register</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Blog</a>
-                        <ul>
-                            <li><a href="#">Classic Layout</a>
-                                <ul>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Masonry Layout</a>
-                                <ul>
-                                    <li><a href="blog-masonry-4col.html">Four Columns</a></li>
-                                    <li><a href="blog-masonry-3col.html">Three Columns</a></li>
-                                    <li><a href="blog-masonry-2col.html">Two Columns</a></li>
-                                    <li><a href="blog-masonry-2col-left-sidebar.html">Two Col - Left Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="single.html">Blog Post</a></li>
-                            <li><a href="single-left-sidebar.html">Post - Left Sidebar</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Elements</a>
-                        <ul>
-                            <li><a href="elements-headers.html">Headers</a></li>
-                            <li><a href="elements-footers.html">Footers</a></li>
-                            <li><a href="elements-products.html">Products</a></li>
-                            <li><a href="elements-banners.html">Banners</a></li>
-                            <li><a href="elements-pageheaders.html">Page Headers</a></li>
-                            <li><a href="elements-collapses.html">Collapses</a></li>
-                            <li><a href="elements-tabs.html">Tabs</a></li>
-                            <li><a href="elements-forms.html">Forms</a></li>
-                            <li><a href="elements-typography.html">Typography</a></li>
-                            <li><a href="elements-buttons.html">Buttons</a></li>
-                            <li><a href="elements-progressbars.html">Progress Bars</a></li>
-                            <li><a href="elements-media.html">Media</a></li>
-                            <li><a href="elements-more.html">More</a></li>
-                        </ul>
-                    </li>
-                    <li class="reverse"><a href="#">Portfolio</a>
-                        <ul>
-                            <li><a href="#">Grid Layout</a>
-                                <ul>
-                                    <li><a href="portfolio-grid-4col.html">Four Columns</a></li>
-                                    <li><a href="portfolio-grid-3col.html">Three Columns</a></li>
-                                    <li><a href="portfolio-grid-2col.html">Two Columns</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Masonry Layout</a>
-                                <ul>
-                                    <li><a href="portfolio-masonry-4col.html">Four Columns</a></li>
-                                    <li><a href="portfolio-masonry-3col.html">Three Columns</a></li>
-                                    <li><a href="portfolio-masonry-2col.html">Two Columns</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Masonry (Nogap)</a>
-                                <ul>
-                                    <li><a href="portfolio-masonry-nogap-4col.html">Four Columns</a></li>
-                                    <li><a href="portfolio-masonry-nogap-3col.html">Three Columns</a></li>
-                                    <li><a href="portfolio-masonry-nogap-2col.html">Two Columns</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="portfolio-custom.html">Portfolio Custom</a></li>
-                            <li><a href="single-portfolio.html">Single Portfolio</a></li>
-                            <li><a href="single-portfolio2.html">Single Portfolio 2</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="index.html">ANA SƏHİFƏ</a></li>
+                    <li><a href="#">kİTAB SAT</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">HAQQIMIZDA</a></li>
+                    <li class="reverse"><a href="#">BİZİMLƏ ƏLAQƏ</a></li>
                 </ul>
 
                 <ul class="mobile-menu">
-                    <li>
-                        <a href="index.html">Home</a>
-                        <ul>
-                            <li><a href="index.html">Home Version 1</a></li>
-                            <li><a href="index2.html">Home Version 2</a></li>
-                            <li><a href="index3.html">Home Version 3</a></li>
-                            <li><a href="index4.html">Home Version 4</a></li>
-                            <li><a href="index5.html">Home Version 5</a></li>
-                            <li><a href="index6.html">Home Version 6</a></li>
-                            <li><a href="index7.html">Home Version 7</a></li>
-                            <li><a href="coming-soon.html">Coming Soon</a></li>
-                        </ul>
-                    </li>
-                    <li class="mmenu-container"><a href="#">Shop</a>
-                        <div class="megamenu">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-5">
-                                        <div class="mmenu-title">Clothing</div><!-- End .mmenu-title -->
-                                        <ul>
-                                            <li><a href="#">Dresses</a></li>
-                                            <li><a href="#">Jeans &amp; Trousers </a></li>
-                                            <li><a href="#">Blouses &amp; Shirts</a></li>
-                                            <li><a href="#">Tops &amp; T-Shirts</a></li>
-                                            <li><a href="#">Jackets &amp; Coats</a></li>
-                                            <li><a href="#">Skirts</a></li>
-                                        </ul>
-                                    </div><!-- End .col-5 -->
-                                    <div class="col-5">
-                                        <div class="mmenu-title">Shoes</div><!-- End .mmenu-title -->
-                                        <ul>
-                                            <li>
-                                                <a href="#"><span>Formal Shoes<span class="tip">New</span></span></a>
-                                            </li>
-                                            <li><a href="#">Casual Shoes</a></li>
-                                            <li><a href="#"><span>Sandals<span class="tip">New</span></span></a></li>
-                                            <li><a href="#"><span>Boots<span class="tip">New</span></span></a></li>
-                                            <li><a href="#">Wide Fit</a></li>
-                                            <li><a href="#">Slippers</a></li>
-                                        </ul>
-                                    </div><!-- End .col-5 -->
-                                    <div class="col-5">
-                                        <div class="mmenu-title">ACCESSORIES</div><!-- End .mmenu-title -->
-                                        <ul>
-                                            <li><a href="#"><span>Bags &amp; Purses<span class="tip hot">Hot</span></span></a></li>
-                                            <li><a href="#">Belts</a></li>
-                                            <li><a href="#"><span>Gloves<span class="tip hot">Hot</span></span></a></li>
-                                            <li><a href="#"><span>Jewellery<span class="tip hot">Hot</span></span></a></li>
-                                            <li><a href="#">Sunglasses</a></li>
-                                            <li><a href="#">Hair Accessories</a></li>
-                                        </ul>
-                                    </div><!-- End .col-5 -->
-                                    <div class="col-5">
-                                        <div class="mmenu-title">Sports</div><!-- End .mmenu-title -->
-                                        <ul>
-                                            <li><a href="#">Sport Tops &amp; Vests</a></li>
-                                            <li><a href="#">Hoodies</a></li>
-                                            <li><a href="#">Swimwear</a></li>
-                                            <li><a href="#">FootWear</a></li>
-                                            <li><a href="#">Sports Underwear</a></li>
-                                            <li><a href="#">Bags</a></li>
-                                        </ul>
-                                    </div><!-- End .col-5 -->
-                                    <div class="col-5">
-                                        <div class="banner">
-                                            <a href="#" title="Banner title">
-                                                <img src="{{ asset('images/images/banners/header/banner1.jpg') }}" alt="Banner">
-                                            </a>
-                                        </div><!-- End .banner -->
-                                    </div><!-- End .col-5 -->
-                                </div><!-- End .row -->
-
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="banner">
-                                            <a href="#" title="Banner title">
-                                                <img src="{{ asset('images/front/images/banners/header/banner2.jpg') }}" alt="Banner">
-                                            </a>
-                                        </div><!-- End .banner -->
-                                    </div><!-- End .col-sm-4 -->
-
-                                    <div class="col-sm-4">
-                                        <div class="banner">
-                                            <a href="#" title="Banner title">
-                                                <img src="{{ asset('images/front/images/banners/header/banner3.jpg') }}" alt="Banner">
-                                            </a>
-                                        </div><!-- End .banner -->
-                                    </div><!-- End .col-sm-4 -->
-
-                                    <div class="col-sm-4">
-                                        <div class="banner">
-                                            <a href="#" title="Banner title">
-                                                <img src="{{ asset('images/front/images/banners/header/banner4.jpg') }}" alt="Banner">
-                                            </a>
-                                        </div><!-- End .banner -->
-                                    </div><!-- End .col-sm-4 -->
-                                </div><!-- End .row -->
-                            </div><!-- End .container -->
-                        </div><!-- End .megamenu -->
-                    </li>
-                    <li><a href="#">Pages</a>
-                        <ul>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="#">Category Grid</a>
-                                <ul>
-                                    <li><a href="category.html">Category</a></li>
-                                    <li><a href="category-2col.html">Two Columns</a></li>
-                                    <li><a href="category-3col.html">Three Columns</a></li>
-                                    <li><a href="category-left-sidebar.html">Category - Left Sidebar</a></li>
-                                    <li><a href="category-left-sidebar-2col.html">Left Sidebar Two Col</a></li>
-                                    <li><a href="category-left-sidebar-3col.html">Left Sidebar Three Col</a></li>
-                                    <li><a href="category-fullwidth-3col.html">Fullwidth Three Col</a></li>
-                                    <li><a href="category-fullwidth-4col.html">Fullwidth Four Col</a></li>
-                                    <li><a href="category-fullwidth-5col.html">Fullwidth Five Col</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Category List</a>
-                                <ul>
-                                    <li><a href="category-list.html">Category List</a></li>
-                                    <li><a href="category-list-left-sidebar.html">List - Left Sidebar</a></li>
-                                    <li><a href="category-list-right-sidebar.html">List - Right Sidebar</a></li>
-                                    <li><a href="category-list-box.html">Category ListBox</a></li>
-                                    <li><a href="category-list-box-left-sidebar.html">ListBox - Left Sidebar</a></li>
-                                    <li><a href="category-list-box-right-sidebar.html">ListBox - Right Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Product</a>
-                                <ul>
-                                    <li><a href="product.html">Product Version 1</a></li>
-                                    <li><a href="product2.html">Product Version 2</a></li>
-                                    <li><a href="product3.html">Product Version 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="cart.html">Shopping Cart</a></li>
-                            <li><a href="compare.html">Compare Products</a></li>
-                            <li><a href="checkout.html">Checkout Page</a></li>
-                            <li><a href="#">Contact</a>
-                                <ul>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="contact2.html">Contact Us 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="404.html">404</a></li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="register.html">Register</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Blog</a>
-                        <ul>
-                            <li><a href="#">Classic Layout</a>
-                                <ul>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Masonry Layout</a>
-                                <ul>
-                                    <li><a href="blog-masonry-4col.html">Four Columns</a></li>
-                                    <li><a href="blog-masonry-3col.html">Three Columns</a></li>
-                                    <li><a href="blog-masonry-2col.html">Two Columns</a></li>
-                                    <li><a href="blog-masonry-2col-left-sidebar.html">Two Col - Left Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="single.html">Blog Post</a></li>
-                            <li><a href="single-left-sidebar.html">Post - Left Sidebar</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Elements</a>
-                        <ul>
-                            <li><a href="elements-headers.html">Headers</a></li>
-                            <li><a href="elements-footers.html">Footers</a></li>
-                            <li><a href="elements-products.html">Products</a></li>
-                            <li><a href="elements-banners.html">Banners</a></li>
-                            <li><a href="elements-pageheaders.html">Page Headers</a></li>
-                            <li><a href="elements-collapses.html">Collapses</a></li>
-                            <li><a href="elements-tabs.html">Tabs</a></li>
-                            <li><a href="elements-forms.html">Forms</a></li>
-                            <li><a href="elements-typography.html">Typography</a></li>
-                            <li><a href="elements-buttons.html">Buttons</a></li>
-                            <li><a href="elements-progressbars.html">Progress Bars</a></li>
-                            <li><a href="elements-media.html">Media</a></li>
-                            <li><a href="elements-more.html">More</a></li>
-                        </ul>
-                    </li>
-                    <li class="reverse"><a href="#">Portfolio</a>
-                        <ul>
-                            <li><a href="#">Grid Layout</a>
-                                <ul>
-                                    <li><a href="portfolio-grid-4col.html">Four Columns</a></li>
-                                    <li><a href="portfolio-grid-3col.html">Three Columns</a></li>
-                                    <li><a href="portfolio-grid-2col.html">Two Columns</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Masonry Layout</a>
-                                <ul>
-                                    <li><a href="portfolio-masonry-4col.html">Four Columns</a></li>
-                                    <li><a href="portfolio-masonry-3col.html">Three Columns</a></li>
-                                    <li><a href="portfolio-masonry-2col.html">Two Columns</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Masonry (Nogap)</a>
-                                <ul>
-                                    <li><a href="portfolio-masonry-nogap-4col.html">Four Columns</a></li>
-                                    <li><a href="portfolio-masonry-nogap-3col.html">Three Columns</a></li>
-                                    <li><a href="portfolio-masonry-nogap-2col.html">Two Columns</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="portfolio-custom.html">Portfolio Custom</a></li>
-                            <li><a href="single-portfolio.html">Single Portfolio</a></li>
-                            <li><a href="single-portfolio2.html">Single Portfolio 2</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="index.html">ANA SƏHİFƏ</a></li>
+                    <li><a href="#">kİTAB SAT</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">HAQQIMIZDA</a></li>
+                    <li class="reverse"><a href="#">BİZİMLƏ ƏLAQƏ</a></li>
                 </ul>
             </nav>
 
             <div class="header-search-container search-dropdown-fix">
                 <a href="#" class="search-dropdown-btn" title="Search Form">
-                    <i class="icon icon-header-search"></i>
+                    <i class="fa fa-search"></i>
                 </a>
 
                 <form action="#" class="header-search-form">
                     <div class="dropdown search-dropdown">
                         <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             All Categories
-                            <i class="icon icon-search-arrow"></i>
+                            <i class="fa fa-arrow-down"></i>
                         </a>
 
                         <ul class="dropdown-menu">
@@ -495,7 +82,7 @@
                     </div><!-- End .dropdown -->
                     <input type="search" class="form-control" required>
                     <button type="submit" class="btn">
-                        <i class="icon icon-header-search"></i>
+                        <i class="fa fa-search"></i>
                     </button>
                 </form>
             </div><!-- End .header-search-container -->
@@ -514,39 +101,39 @@
                     <ul class="header-dropdown account-dropdown">
                         <li>
                             <a href="#" title="Currency/Language">
-                                <i class="icon icon-header icon-user"></i>
-                                <span>My Account</span>
+                                <i class="fa fa-user"></i>
+                                <span>Hesabım</span>
                             </a>
 
                             <ul>
                                 <li>
                                     <a href="#">
-                                        <i class="icon icon-dropdown icon-dropdown-user"></i>
-                                        <span>My Account</span>
+                                        <i class="fa fa-user"></i>
+                                        <span>Profilim</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="icon icon-dropdown icon-dropdown-wishlist"></i>
-                                        <span>My Wishlist</span>
+                                        <i class="fa fa-heart"></i>
+                                        <span>İstək listim</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="icon icon-dropdown icon-dropdown-heart"></i>
-                                        <span>My Favorites</span>
+                                        <i class="fa fa-star"></i>
+                                        <span>Sevdiklərim</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="icon icon-dropdown icon-dropdown-check"></i>
+                                        <i class="far fa-credit-card"></i>
                                         <span>Checkout</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="icon icon-dropdown icon-dropdown-lock"></i>
-                                        <span>Login or Register</span>
+                                        <i class="fa fa-lock"></i>
+                                        <span>Daxil ol və ya Qeydiyyatdan keç</span>
                                     </a>
                                 </li>
                             </ul>
@@ -555,7 +142,7 @@
 
                     <div class="dropdown header-dropdown cart-dropdown">
                         <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="icon icon-header icon-cart"></i>
+                            <i class="fa fa-shopping-bag"></i>
                             <span class="dcart-total-count">2</span>
                         </a>
 
@@ -576,7 +163,7 @@
                                             <span class="product-price">$280.00</span>
                                         </div><!-- End .product-price-container -->
                                     </div><!-- End .product-meta -->
-                                    <a href="#" class="icon delete-btn lighter" title="Delete Product"><span class="sr-only">Delete product</span></a>
+                                    <a href="#" class="fa fa-times" title="Delete Product"><span class="sr-only">Delete product</span></a>
                                 </div><!-- End .product -->
                                 <div class="product product-sm">
                                     <figure>
@@ -593,7 +180,7 @@
                                             <span class="product-price">$750.00</span>
                                         </div><!-- End .product-price-container -->
                                     </div><!-- End .product-meta -->
-                                    <a href="#" class="icon delete-btn lighter" title="Delete Product"><span class="sr-only">Delete product</span></a>
+                                    <a href="#" class="fa fa-times" title="Delete Product"><span class="sr-only">Delete product</span></a>
                                 </div><!-- End .product -->
                             </div><!-- End .dcart-products -->
 
@@ -614,14 +201,14 @@
                     <ul class="header-dropdown">
                         <li>
                             <a href="#" title="Currency/Language">
-                                <i class="icon icon-header icon-globe"></i>
+                                <i class="fa fa-globe"></i>
                                 <span>Currency/Language</span>
                             </a>
 
                             <ul>
                                 <li>
                                     <a href="#">
-                                        <i class="icon icon-dropdown icon-language"></i>
+                                        <i class="fa fa-flag"></i>
                                         <span>Language</span>
                                     </a>
 
@@ -646,13 +233,13 @@
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="{{ asset('images/front/images/flags/germany.jpg') }}" alt="Germany Flag">
+                                                <img src="assets/images/flags/germany.jpg" alt="Germany Flag">
                                                 <span>German</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="{{ asset('images/front/images/flags/italy.jpg') }}" alt="Italy Flag">
+                                                <img src="assets/images/flags/italy.jpg" alt="Italy Flag">
                                                 <span>Italian</span>
                                             </a>
                                         </li>
@@ -660,7 +247,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="icon icon-dropdown icon-currency"></i>
+                                        <i class="fa fa-money-bill-alt"></i>
                                         <span>Currency</span>
                                     </a>
 
