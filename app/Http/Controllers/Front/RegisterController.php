@@ -7,7 +7,6 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -18,11 +17,22 @@ class RegisterController extends Controller
 
     public function registerProcess(Request $request){
         $validator = Validator::make($request->all(),[
-
+            'username' => 'required|string|min:3|max:30|unique:users,username',
+            'name' => 'required|string|max:60',
+            'lastname' => 'required|string',
+            'email' => 'required|string|email|unique:users,email',
+            'password' => 'required|string|min:6|confirmed',
+            'birthday' => 'required|date',
+            'gender'=>'required|in:1,2',
+            'address' => 'required|string',
+            'mobil_phone' => 'required|string',
+            'mobil_phone2' => 'string',
+            'zip_code' => 'required|string',
+            'city' => 'required|integer'
         ]);
 
         if ($validator->fails()){
-
+            return back()->withErrors($validator->errors());
         }
         else{
             $user = new User();
@@ -38,10 +48,10 @@ class RegisterController extends Controller
             $user->address = $request->get('address');
             $user->city = $request->get('city');
             $user->activation_code = str_random(60);
-            $user->password = Hash::make($request->get('password'));
+            $user->password = bcrypt($request->get('password'));
             $user->save();
-            Auth::login($user,true);
-            return redirect()->route('login_page');
+            Auth::login($user);
+            return redirect()->route('login');
         }
     }
 

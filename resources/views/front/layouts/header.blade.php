@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<!--[if IE 9]><html class="ie9"><![endif]-->
-<!--[if !IE]><!--><html><!--<![endif]-->
+<!--[if IE 9]>
+<html class="ie9"><![endif]-->
+<!--[if !IE]><!-->
+<html><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <title>@yield("title") | Alfakitab</title>
@@ -8,7 +10,8 @@
     <meta name="keywords" content="@yield("keywords")">
     <meta name="author" content="Axmedbek">
 
-    <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
@@ -16,16 +19,18 @@
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/front/images/favicons/faviconx57.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/front/images/favicons/faviconx72.png') }}">
 
-    <link href='http://fonts.googleapis.com/css?family=Hind:400,700,600,500,300%7CFira+Sans:400,700italic,500italic,400italic,300italic,700,500,300' rel='stylesheet' type='text/css'>
+    {{--<link href='http://fonts.googleapis.com/css?family=Hind:400,700,600,500,300%7CFira+Sans:400,700italic,500italic,400italic,300italic,700,500,300'--}}
+          {{--rel='stylesheet' type='text/css'>--}}
 
     <!-- Fira Sans Fix - Google Fira Sans sometimes fails to load -->
-    <link href='http://code.cdn.mozilla.net/fonts/fira.css' rel='stylesheet'>
+    {{--<link href='http://code.cdn.mozilla.net/fonts/fira.css' rel='stylesheet'>--}}
 
     <link rel="stylesheet" href="{{ asset('css/front/plugins.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/front/settings.css') }}">
     <link rel="stylesheet" href="{{ asset('css/front/navigation.css') }}">
     <link rel="stylesheet" href="{{ asset('css/front/style.css') }}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     @yield("css")
 </head>
 <body>
@@ -34,7 +39,7 @@
         <div class="container-fluid">
             <div class="logo">
                 <a href="{{ route('home_page') }}" title="Alfakitab - Online kitab mağazası">
-                    <img src="{{ asset('images/front/images/logo-index.png') }}" alt="Alfakitab">
+                    <img src="{{ asset('images/front/images/alfakitab_logo.svg') }}" alt="Alfakitab - Logo" style="width: 100px;height: 36px;">
                 </a>
             </div><!-- End .logo -->
 
@@ -86,38 +91,47 @@
                                 <i class="fa fa-user"></i>
                                 <span>Hesabım</span>
                             </a>
-
                             <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-user"></i>
-                                        <span>Profilim</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-heart"></i>
-                                        <span>İstək listim</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-star"></i>
-                                        <span>Sevdiklərim</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="far fa-credit-card"></i>
-                                        <span>Checkout</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('login_page') }}">
-                                        <i class="fa fa-lock"></i>
-                                        <span>Daxil ol və ya Qeydiyyatdan keç</span>
-                                    </a>
-                                </li>
+                                @auth()
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-user"></i>
+                                            <span>Hesabım</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-heart"></i>
+                                            <span>İstək listim</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-star"></i>
+                                            <span>Bəyəndiklərim</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="far fa-credit-card"></i>
+                                            <span>Ödəniş</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('logout') }}">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                            <span>Hesabdan çıx</span>
+                                        </a>
+                                    </li>
+                                @endauth
+                                @guest()
+                                    <li>
+                                        <a href="{{ route('login') }}">
+                                            <i class="fa fa-lock"></i>
+                                            <span>Daxil ol və ya Qeydiyyatdan keç</span>
+                                        </a>
+                                    </li>
+                                @endguest
                             </ul>
                         </li>
                     </ul>
@@ -134,7 +148,8 @@
                                 <div class="product product-sm">
                                     <figure>
                                         <a href="#">
-                                            <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
+                                            <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}"
+                                                 alt="Product">
                                         </a>
                                     </figure>
                                     <div class="product-meta">
@@ -150,7 +165,8 @@
                                 <div class="product product-sm">
                                     <figure>
                                         <a href="#">
-                                            <img src="{{ asset('images/front/images/products/thumbs/product2.jpg') }}" alt="Product">
+                                            <img src="{{ asset('images/front/images/products/thumbs/product2.jpg') }}"
+                                                 alt="Product">
                                         </a>
                                     </figure>
                                     <div class="product-meta">
@@ -180,6 +196,7 @@
                             </div><!-- End .dcart-action-container -->
                         </div><!-- End .dropdown-menu -->
                     </div><!-- End .header-dropdown -->
+
                     <ul class="header-dropdown">
                         <li>
                             <a href="#" title="Currency/Language">
@@ -197,19 +214,22 @@
                                     <ul>
                                         <li>
                                             <a href="#">
-                                                <img src="{{ asset('images/front/images/flags/england.jpg') }}" alt="England Flag">
+                                                <img src="{{ asset('images/front/images/flags/england.jpg') }}"
+                                                     alt="England Flag">
                                                 <span>English</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="{{ asset('images/front/images/flags/spain.jpg') }}" alt="Spain Flag">
+                                                <img src="{{ asset('images/front/images/flags/spain.jpg') }}"
+                                                     alt="Spain Flag">
                                                 <span>Spanish</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <img src="{{ asset('images/front/images/flags/france.jpg') }}" alt="France Flag">
+                                                <img src="{{ asset('images/front/images/flags/france.jpg') }}"
+                                                     alt="France Flag">
                                                 <span>French</span>
                                             </a>
                                         </li>

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Front;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
@@ -17,10 +17,9 @@ class LoginController extends Controller
 
     public function loginProcess(Request $request)
     {
-        $credentials = $request->only('email', 'password');
-
-        if (Auth::attempt($credentials)) {
-           // request()->session()->regenerate();
+        if (Auth::attempt(['email' => $request->get('email') , 'password' => $request->get('password')])
+        || Auth::attempt(['username' => $request->get('email') , 'password' => $request->get('password')])) {
+            request()->session()->regenerate();
             return redirect()->intended('/');
         } else {
             $errors = ['email' => 'Girisde xeta var'];

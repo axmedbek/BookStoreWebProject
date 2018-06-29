@@ -14,19 +14,32 @@
 
 //front routes
 
-Route::group(['middleware' => 'web'], function () {
-    Route::get('/','Front\HomeController@index')->name('home_page');
-    Route::get('/login','Front\LoginController@index')->name('login_page');
-    Route::post('/login','Front\LoginController@loginProcess')->name('login_process');
-    Route::get('/register','Front\RegisterController@index')->name('register_page');
-    Route::post('/register','Front\RegisterController@registerProcess')->name('register_process');
-    Route::get('/product/{productName}','Front\ProductController@index')->name('product_page');
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
+Route::group(['middleware' => 'auth'],function (){
+    Route::get('/', 'Front\HomeController@index')->name('home_page');
 });
+
+Route::get('/logout',function(){
+    Auth::logout();
+    return redirect()->route('home_page');
+})->name('logout');
+
+Route::group(['middleware' => 'guest'],function(){
+    Route::get('/login', 'Front\LoginController@index')->name('login');
+    Route::post('/login', 'Front\LoginController@loginProcess')->name('login_process');
+    Route::get('/register', 'Front\RegisterController@index')->name('register_page');
+    Route::post('/register', 'Front\RegisterController@registerProcess')->name('register_process');
+});
+
+Route::get('/product/{productName}', 'Front\ProductController@index')->name('product_page');
+
 
 //admin routes
 
-Route::group(['prefix' => 'admin'],function(){
-    Route::get('/','Admin\DashboardController@index')->name('admin_page');
-
+Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
+    Route::get('/', 'Admin\DashboardController@index')->name('admin_page');
+    Route::get('/msk/cities','Admin\Msk\CityController@index')->name('msk_cities');
 });
 

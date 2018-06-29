@@ -417,7 +417,7 @@ h5, .h5,
 h6, .h6 {
   font-weight: 600;
   line-height: 1;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI",sans-serif;
   color: #666;
   margin: 0 0 33px;
   letter-spacing: 0.7px;
@@ -511,7 +511,7 @@ blockquote {
   background-color: #f6f6fa;
   border: none;
   border-radius: 6px;
-  font: italic 400 16px/1.55 "Fira Sans", Arial, sans-serif;
+  font: italic 400 16px/1.55 "Segeo-UI", Arial, sans-serif;
   color: #7e8282;
 }
 
@@ -672,7 +672,7 @@ p {
 
 .carousel-title.v2 {
   font-weight: 400;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   margin-bottom: 26px;
 }
 
@@ -699,7 +699,7 @@ p {
 }
 
 .page-header h1 {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 600;
@@ -744,7 +744,7 @@ p {
 
 .page-header.largest h1 {
   float: none;
-  font: 700 45px/1 "Fira Sans", Arial, sans-serif;
+  font: 700 45px/1 "Segeo-UI", Arial, sans-serif;
   margin: 0 0 12px;
 }
 
@@ -785,7 +785,7 @@ p {
   background-color: transparent;
   border-radius: 0;
   letter-spacing: 0.7px;
-  font: 500 13px/17px "Hind", sans-serif;
+  font: 500 13px/17px "Segeo-UI", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -907,7 +907,7 @@ p {
 
 .panel .panel-heading .panel-title {
   position: relative;
-  font: 500 17px/1 "Hind", sans-serif;
+  font: 500 17px/1 "Segeo-UI", sans-serif;
   letter-spacing: 0.08em;
 }
 
@@ -921,7 +921,7 @@ p {
 
 .panel .panel-heading .panel-title a:before {
   display: inline-block;
-  font-family: 'FontAwesome';
+  font-family: 'Segeo-UI';
   content: "\f106";
   position: absolute;
   right: 30px;
@@ -969,7 +969,7 @@ p {
 }
 
 .panel.panel-custom .panel-heading .panel-title {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   font-size: 18px;
 }
 
@@ -1035,7 +1035,7 @@ p {
 
 .nav.nav-tabs > li > a {
   padding: 11px 6px 8px;
-  font: 600 12px/1.5 "Hind", sans-serif;
+  font: 600 12px/1.5 "Segeo-UI", sans-serif;
   color: #c9c9c9;
   letter-spacing: 0.07em;
   transition: background 0.35s;
@@ -1124,7 +1124,7 @@ p {
 
 .nav.nav-tabs.v2 > li > a {
   padding: 8px 8px 5px;
-  font: 400 12px/1.5 "Fira Sans", Arial, sans-serif;
+  font: 400 12px/1.5 "Segeo-UI", Arial, sans-serif;
   color: #c3c3c3;
   letter-spacing: 0.1m;
   border-color: transparent;
@@ -1508,7 +1508,7 @@ li:hover .tab-icon.icon-fridge.icon2 {
 .nav.nav-pills > li > a {
   position: relative;
   padding: 12px 6px 9px;
-  font: 600 12px/1.5 "Hind", sans-serif;
+  font: 600 12px/1.5 "Segeo-UI", sans-serif;
   color: #b1b1b1;
   background-color: #ececec;
   letter-spacing: 0.07em;
@@ -1640,7 +1640,7 @@ li:hover .tab-icon.icon-fridge.icon2 {
 .nav.nav-pills.nav-bordered > li > a {
   position: relative;
   padding: 6px 14.5px 4px;
-  font: 700 15px/1.5 "Hind", sans-serif;
+  font: 700 15px/1.5 "Segeo-UI", sans-serif;
   color: #9d9c9c;
   background-color: transparent;
   letter-spacing: 0.05em;
@@ -1732,7 +1732,7 @@ li:hover .tab-icon.icon-fridge.icon2 {
 
 .nav.nav-pills.nav-bordered.v2 > li > a {
   padding: 6px 14.5px 4px;
-  font: 400 16px/1.5 "Fira Sans", Arial, sans-serif;
+  font: 400 16px/1.5 "Segeo-UI", Arial, sans-serif;
   color: #bcbcbc;
   font-style: italic;
   text-transform: capitalize;
@@ -1814,7 +1814,7 @@ li:hover .tab-icon.icon-fridge.icon2 {
 .btn {
   font-size: 15px;
   font-weight: 600;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   letter-spacing: 0.2px;
   text-transform: uppercase;
   padding: 13px 24px 10px;
@@ -2463,7 +2463,7 @@ li:hover .tab-icon.icon-fridge.icon2 {
 .form-control {
   height: 56px;
   font-size: 17px;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   border-radius: 5px;
   margin-bottom: 15px;
   color: #9b9b9b;
@@ -2562,7 +2562,7 @@ li:hover .tab-icon.icon-fridge.icon2 {
 }
 
 .input-desc {
-  font: 400 17px/1 "Hind", sans-serif;
+  font: 400 17px/1 "Segeo-UI", sans-serif;
   color: #9b9b9b;
   margin-bottom: 7px;
 }
@@ -2718,7 +2718,7 @@ select.form-control.input-lg {
 .checkbox,
 .radio {
   margin: 0 0 30px;
-  font: 400 17px/1.25 "Hind", sans-serif;
+  font: 400 17px/1.25 "Segeo-UI", sans-serif;
 }
 
 .radio label.custom-radio-wrapper,
@@ -2870,7 +2870,7 @@ select.form-control.input-lg {
 
 .progress-container .progress-title {
   color: #888888;
-  font: 400 17px/1.2 "Hind", sans-serif;
+  font: 400 17px/1.2 "Segeo-UI", sans-serif;
   margin-bottom: 4px;
 }
 
@@ -2911,7 +2911,7 @@ select.form-control.input-lg {
   bottom: 100%;
   z-index: 99;
   margin-bottom: 13px;
-  font: 600 12px/1 "Hind", sans-serif;
+  font: 600 12px/1 "Segeo-UI", sans-serif;
   padding: 5px 0 3px;
 }
 
@@ -2940,7 +2940,7 @@ select.form-control.input-lg {
 .pagination-container {
   margin: 0 0 110px;
   padding: 0;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
 }
 
 @media (min-width: 992px) {
@@ -3586,7 +3586,7 @@ select.form-control.input-lg {
 
 /* Bootstrap Tooltip */
 .tooltip {
-  font-family: Arial, sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   font-size: 13px;
   letter-spacing: 0.4px;
 }
@@ -3789,7 +3789,7 @@ select.form-control.input-lg {
 .header-dropdown {
   display: inline-block;
   margin-top: 21px;
-  font: 400 12px/1.5 "Hind", sans-serif;
+  font: 400 12px/1.5 "Segeo-UI", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -3980,7 +3980,7 @@ select.form-control.input-lg {
 }
 
 .header-dropdown.account-dropdown ul {
-  min-width: 200px;
+  min-width: 300px;
   right: 0;
   margin-right: -90px;
 }
@@ -4008,7 +4008,7 @@ select.form-control.input-lg {
   color: #fff;
   background-color: #00aeff;
   text-align: center;
-  font: 700 10px/14px "Fira Sans", Arial, sans-serif;
+  font: 700 10px/14px "Segeo-UI", Arial, sans-serif;
 }
 
 .header-dropdown.cart-dropdown.open > a .dcart-total-count, .header-dropdown.cart-dropdown:hover > a .dcart-total-count, .header-dropdown.cart-dropdown:focus > a .dcart-total-count {
@@ -4088,7 +4088,7 @@ select.form-control.input-lg {
 .header-dropdown.cart-dropdown .product.product-sm .product-price-container {
   margin-bottom: 0;
   color: #cbcbcb;
-  font-family: Arial, sans-serif;
+  font-family: "Segeo-UI", sans-serif;
 }
 
 .header-dropdown.cart-dropdown .product.product-sm .product-price-container .product-old-price,
@@ -4156,7 +4156,7 @@ select.form-control.input-lg {
 /* Search Form */
 .header-search-container {
   float: none;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   margin-top: 22px;
   width: 100%;
 }
@@ -4446,7 +4446,7 @@ select.form-control.input-lg {
 }
 
 .menu {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: 0.035em;
@@ -4546,7 +4546,7 @@ select.form-control.input-lg {
 
 .menu li li a {
   display: block;
-  font: 400 12px/1.5 "Hind", sans-serif;
+  font: 400 12px/1.5 "Segeo-UI", sans-serif;
   padding: 12px 20px 10px;
   font-weight: 600;
   color: #666;
@@ -4664,7 +4664,7 @@ select.form-control.input-lg {
 }
 
 .megamenu .mmenu-title {
-  font: 500 15px/1 "Fira Sans", Arial, sans-serif;
+  font: 500 15px/1 "Segeo-UI", Arial, sans-serif;
   color: #777777;
   margin-bottom: 21px;
   text-transform: uppercase;
@@ -4718,7 +4718,7 @@ select.form-control.input-lg {
 }
 
 .tip {
-  font: 500 9px/1 "Hind", sans-serif;
+  font: 500 9px/1 "Segeo-UI", sans-serif;
   background-color: #00aeff;
   color: #fff;
   position: absolute;
@@ -4755,7 +4755,7 @@ select.form-control.input-lg {
 }
 
 .navbar-toggle .toggle-text {
-  font: 600 16px/1 "Hind", sans-serif;
+  font: 600 16px/1 "Segeo-UI", sans-serif;
   text-transform: uppercase;
   position: absolute;
   left: 100%;
@@ -4895,7 +4895,7 @@ select.form-control.input-lg {
 }
 
 .mobile-menu li {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   text-transform: uppercase;
 }
 
@@ -5085,7 +5085,7 @@ select.form-control.input-lg {
 
 .top-dropdowns {
   float: right;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   font-size: 0;
   margin-bottom: -1px;
   margin-right: -20px;
@@ -5243,7 +5243,7 @@ select.form-control.input-lg {
 }
 
 .dropdown.login-dropdown .dropdown-menu .dropdown-title {
-  font: 600 21px/1 "Hind", sans-serif;
+  font: 600 21px/1 "Segeo-UI", sans-serif;
   color: #555555;
   letter-spacing: 0.04em;
   margin-bottom: 18px;
@@ -5330,7 +5330,7 @@ select.form-control.input-lg {
 
 .header-bottom .info-box {
   text-align: center;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   letter-spacing: 0.05em;
   font-size: 15px;
   font-weight: 500;
@@ -5714,7 +5714,7 @@ select.form-control.input-lg {
   top: 50%;
   font-size: 14px;
   font-weight: 600;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   line-height: 1;
   color: #666666;
   text-transform: uppercase;
@@ -6157,7 +6157,7 @@ select.form-control.input-lg {
 
 .header.header4 .header-top {
   color: #777;
-  font: 400 14px/1.25 "Hind", sans-serif;
+  font: 400 14px/1.25 "Segeo-UI", sans-serif;
   border-bottom: 1px solid #eeeded;
 }
 
@@ -6294,7 +6294,7 @@ select.form-control.input-lg {
 }
 
 .header.header4 .header-box .header-box-title {
-  font: 600 13px/1 "Hind", sans-serif;
+  font: 600 13px/1 "Segeo-UI", sans-serif;
   color: #777777;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -7213,7 +7213,7 @@ select.form-control.input-lg {
 }
 
 .header.header6 .header-bottom .info-box p {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   font-style: italic;
 }
 
@@ -7836,7 +7836,7 @@ select.form-control.input-lg {
 }
 
 .side-menu {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   text-transform: uppercase;
 }
 
@@ -7993,7 +7993,7 @@ select.form-control.input-lg {
   display: block;
   color: #f6f6f6;
   text-transform: uppercase;
-  font: 600 15px/1.25 "Hind", sans-serif;
+  font: 600 15px/1.25 "Segeo-UI", sans-serif;
   letter-spacing: 0.02em;
   padding-left: 27px;
 }
@@ -8119,7 +8119,7 @@ Rev slider not use display:none - so it confuses bg check plugin */
 }
 
 .tp-caption.revslider-text {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   letter-spacing: 0.05em;
 }
 
@@ -8147,20 +8147,20 @@ Rev slider not use display:none - so it confuses bg check plugin */
 }
 
 .tp-caption.revslider-title {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.05em;
 }
 
 .tp-caption.revslider-title.v2 {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   letter-spacing: 0.1em;
 }
 
 .tp-caption.revslider-subtitle {
   color: #555;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   font-weight: 600;
   letter-spacing: 0.07em;
 }
@@ -8174,7 +8174,7 @@ Rev slider not use display:none - so it confuses bg check plugin */
 }
 
 .tp-caption.revslider-subtitle.v2 {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
 }
 
 .custom.tp-bullets.background--light .tp-bullet {
@@ -8560,7 +8560,7 @@ Rev slider not use display:none - so it confuses bg check plugin */
 .banner.newsletter-banner .form-control {
   border: none;
   height: 43px;
-  font: 400 16px/1.8 "Hind", sans-serif;
+  font: 400 16px/1.8 "Segeo-UI", sans-serif;
   padding: 8px 130px 7px 20px;
   background-color: #fff;
   color: #555555;
@@ -8602,7 +8602,7 @@ Rev slider not use display:none - so it confuses bg check plugin */
   top: 0;
   font-weight: 600;
   font-size: 15px;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   text-transform: uppercase;
   min-width: 110px;
   text-align: center;
@@ -8642,7 +8642,7 @@ Rev slider not use display:none - so it confuses bg check plugin */
 
 .banner.newsletter-banner form.larger .form-control {
   height: 43px;
-  font: 400 16px/1.8 "Hind", sans-serif;
+  font: 400 16px/1.8 "Segeo-UI", sans-serif;
   padding: 8px 130px 7px 20px;
   border-radius: 30px;
   margin-bottom: 0;
@@ -8956,7 +8956,7 @@ figure + .ins-meta {
 
 .ing-hashtag {
   display: block;
-  font: 400 17px/1 "Hind", sans-serif;
+  font: 400 17px/1 "Segeo-UI", sans-serif;
   color: #666;
   margin-bottom: 8px;
 }
@@ -8972,7 +8972,7 @@ figure + .ins-meta {
 }
 
 .ins-info {
-  font: 400 0/1.5 "Fira Sans", Arial, sans-serif;
+  font: 400 0/1.5 "Segeo-UI", Arial, sans-serif;
 }
 
 .ins-info a {
@@ -9356,7 +9356,7 @@ figure + .ins-meta {
 }
 
 .sidebar.home3-sidebar .widget.product-count-widget .product.product-sm .product-price-container {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   color: #c2c2c2;
   position: relative;
   padding-left: 11px;
@@ -9560,7 +9560,7 @@ figure + .ins-meta {
 
 .category-tab-slider .nav.nav-tabs > li > a {
   padding: 11px 5px 7px;
-  font: 600 13px/1.5 "Hind", sans-serif;
+  font: 600 13px/1.5 "Segeo-UI", sans-serif;
   color: #adadad;
   letter-spacing: 0.06em;
   transition: background 0.35s;
@@ -9713,7 +9713,7 @@ figure + .ins-meta {
 }
 
 .dealoftheday-carousel.v4 .product.product-sm .product-price-container {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   margin-bottom: 10px;
 }
 
@@ -9874,7 +9874,7 @@ figure + .ins-meta {
   top: 50%;
   margin-top: -15px;
   color: #b8b8b8;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
 }
 
 @media (min-width: 1600px) {
@@ -9945,7 +9945,7 @@ figure + .ins-meta {
 }
 
 .socials-section.smaller h2 {
-  font: 700 25px/1 "Fira Sans", Arial, sans-serif;
+  font: 700 25px/1 "Segeo-UI", Arial, sans-serif;
   margin-bottom: 20px;
   letter-spacing: 0.09em;
 }
@@ -10042,7 +10042,7 @@ figure + .ins-meta {
 }
 
 .widget-area .widget .product.product-sm .product-price-container {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   font-weight: 500;
   color: #cbcbcb;
 }
@@ -10221,7 +10221,7 @@ figure + .ins-meta {
 }
 
 .sidebar .widget.product-count-widget .product.product-sm .product-count-number {
-  font: 300 28px/1 "Fira Sans", Arial, sans-serif;
+  font: 300 28px/1 "Segeo-UI", Arial, sans-serif;
   position: absolute;
   left: 14px;
   top: 50%;
@@ -10286,7 +10286,7 @@ figure + .ins-meta {
 }
 
 .sidebar .widget.product-count-widget .product.product-sm .product-price-container {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   color: #bfbfbf;
   font-weight: 500;
   margin-bottom: 7px;
@@ -10351,7 +10351,7 @@ figure + .ins-meta {
 .home7 .socials-section h2 {
   font-size: 30px;
   font-weight: 400;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   margin-bottom: 30px;
 }
 
@@ -10362,7 +10362,7 @@ figure + .ins-meta {
 }
 
 .home7 .socials-section .socials-twitter-container {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
 }
 
 .home7 .socials-section .carousel-inner > .item {
@@ -10442,7 +10442,7 @@ figure + .ins-meta {
 }
 
 .banner h3 {
-  font: 700 15px/1 "Fira Sans", Arial, sans-serif;
+  font: 700 15px/1 "Segeo-UI", Arial, sans-serif;
   color: #444444;
   margin-bottom: 11px;
   text-transform: uppercase;
@@ -10470,7 +10470,7 @@ figure + .ins-meta {
 }
 
 .banner h4 {
-  font: 600 12px/1 "Hind", sans-serif;
+  font: 600 12px/1 "Segeo-UI", sans-serif;
   color: #555;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -10497,7 +10497,7 @@ figure + .ins-meta {
 }
 
 .banner p {
-  font: 400 16px/1.1 "Hind", sans-serif;
+  font: 400 16px/1.1 "Segeo-UI", sans-serif;
 }
 
 .banner .btn.btn-sm {
@@ -11169,7 +11169,7 @@ figure + .ins-meta {
 
 .banner.v6 h3 span {
   display: block;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   font-weight: 300;
   font-size: 28px;
 }
@@ -11417,7 +11417,7 @@ figure + .ins-meta {
 }
 
 .banner.v7 h4 {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   font-weight: 500;
   font-size: 16px;
   text-transform: capitalize;
@@ -11440,7 +11440,7 @@ figure + .ins-meta {
 }
 
 .banner.v7 h3 {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   font-weight: 300;
   font-size: 30px;
   margin-bottom: 13px;
@@ -11520,7 +11520,7 @@ figure + .ins-meta {
   font-size: 14px;
   margin-bottom: 4px;
   line-height: 1.45;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -11552,7 +11552,7 @@ figure + .ins-meta {
 .banner.v7 .banner-tweet span {
   font-size: 13px;
   font-style: italic;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
 }
 
 @media (min-width: 992px) {
@@ -11913,7 +11913,7 @@ figure + .ins-meta {
 }
 
 .tp-caption.herotitle {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.05em !important;
@@ -11921,7 +11921,7 @@ figure + .ins-meta {
 
 .tp-caption.herosubtitle,
 .tp-caption.herotext {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   color: #fff;
 }
 
@@ -11953,7 +11953,7 @@ figure + .ins-meta {
   }
 }
 
-@media (max-width: 480x) {
+@media (max-width: 480px) {
   .tp-caption.herocallaction.btn {
     padding: 6px 8px 4px !important;
   }
@@ -11966,7 +11966,7 @@ figure + .ins-meta {
   text-align: center;
   color: #666;
   background-color: transparent;
-  font: 400 20px/1.5 "Fira Sans", Arial, sans-serif;
+  font: 400 20px/1.5 "Segeo-UI", Arial, sans-serif;
   padding: 50px 0 0;
 }
 
@@ -11987,7 +11987,7 @@ figure + .ins-meta {
 }
 
 .lead-quote cite {
-  font: 500 13px/1 "Hind", sans-serif;
+  font: 500 13px/1 "Segeo-UI", sans-serif;
   color: #999999;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -12231,7 +12231,7 @@ figure + .ins-meta {
 }
 
 .testimonials-section h2 {
-  font: 300 36px/1 "Fira Sans", Arial, sans-serif;
+  font: 300 36px/1 "Segeo-UI", Arial, sans-serif;
   margin-bottom: 60px;
   position: relative;
 }
@@ -12303,7 +12303,7 @@ figure + .ins-meta {
 }
 
 .testimonial-gallery {
-  font: 400 19px/1.5 "Hind", sans-serif;
+  font: 400 19px/1.5 "Segeo-UI", sans-serif;
   padding: 0;
   background-color: transparent;
   color: inherit;
@@ -12325,7 +12325,7 @@ figure + .ins-meta {
 }
 
 .testimonial-gallery cite {
-  font: italic 400 15px/1.5 "Fira Sans", Arial, sans-serif;
+  font: italic 400 15px/1.5 "Segeo-UI", Arial, sans-serif;
   color: inherit;
 }
 
@@ -12482,7 +12482,7 @@ figure + .ins-meta {
 .info-box {
   position: relative;
   padding-left: 72px;
-  font: 400 14px/1.36 "Hind", sans-serif;
+  font: 400 14px/1.36 "Segeo-UI", sans-serif;
   color: #999999;
   letter-spacing: 0.02em;
   margin-bottom: 30px;
@@ -12575,7 +12575,7 @@ figure + .ins-meta {
 }
 
 .info-box .info-box-title {
-  font: 500 17px/1 "Fira Sans", Arial, sans-serif;
+  font: 500 17px/1 "Segeo-UI", Arial, sans-serif;
   color: #666666;
   margin-bottom: 12px;
   letter-spacing: 0.07em;
@@ -12748,7 +12748,7 @@ figure + .ins-meta {
 }
 
 .socials-section .socials-twitter-container p {
-  font: 400 16px/1.55 "Hind", sans-serif;
+  font: 400 16px/1.55 "Segeo-UI", sans-serif;
   margin-bottom: 25px;
 }
 
@@ -12765,7 +12765,7 @@ figure + .ins-meta {
 }
 
 .socials-section .socials-twitter-container span {
-  font: italic 400 15px/1.6 "Fira Sans", Arial, sans-serif;
+  font: italic 400 15px/1.6 "Segeo-UI", Arial, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -12873,7 +12873,7 @@ figure + .ins-meta {
 }
 
 .socials-section .socials-facebook-container .f-action span {
-  font: 500 18px/1 "Hind", sans-serif;
+  font: 500 18px/1 "Segeo-UI", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -13036,7 +13036,7 @@ figure + .ins-meta {
 
 .entry .entry-date {
   display: block;
-  font: 400 18px/0.82 "Hind", sans-serif;
+  font: 400 18px/0.82 "Segeo-UI", sans-serif;
   color: #888888;
   margin: 15px 0 10px;
 }
@@ -13055,7 +13055,7 @@ figure + .ins-meta {
 }
 
 .entry .entry-title {
-  font: 700 28px/1.05 "Hind", sans-serif;
+  font: 700 28px/1.05 "Segeo-UI", sans-serif;
   color: #555555;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -13109,7 +13109,7 @@ figure + .ins-meta {
   font-weight: 400;
   /* fix auto inline-block margin */
   font-size: 0;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   line-height: 20px;
 }
 
@@ -13546,7 +13546,7 @@ figure + .ins-meta {
   font-style: normal;
   margin-bottom: 16px;
   padding: 39px 25px 40px 41px;
-  font: 400 15px/1.4 "Hind", sans-serif;
+  font: 400 15px/1.4 "Segeo-UI", sans-serif;
 }
 
 @media (min-width: 1440px) {
@@ -13607,7 +13607,7 @@ figure + .ins-meta {
 
 .testimonial .testimonial-owner .owner-meta {
   margin-left: 92px;
-  font: italic 400 15px/1.45 "Fira Sans", Arial, sans-serif;
+  font: italic 400 15px/1.45 "Segeo-UI", Arial, sans-serif;
   color: #999999;
 }
 
@@ -13645,7 +13645,7 @@ figure + .ins-meta {
 .sidebar .widget .widget-title {
   position: relative;
   color: #555555;
-  font: 700 16px/1.5 "Hind", sans-serif;
+  font: 700 16px/1.5 "Segeo-UI", sans-serif;
   text-transform: uppercase;
   border: 3px solid #e7e7e7;
   padding: 16.5px 70px 13.5px 17px;
@@ -13695,7 +13695,7 @@ figure + .ins-meta {
 .sidebar .widget.widget-category .category-list li {
   position: relative;
   padding: 13.5px 40px 13.5px 15px;
-  font: 400 16px/1.5 "Fira Sans", Arial, sans-serif;
+  font: 400 16px/1.5 "Segeo-UI", Arial, sans-serif;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -13948,7 +13948,7 @@ figure + .ins-meta {
 
 .sidebar .widget .pentry-meta span,
 .sidebar .widget .pentry-meta h5 {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   font-size: 15px;
   line-height: 1.3;
 }
@@ -14031,7 +14031,7 @@ figure + .ins-meta {
 }
 
 .sidebar .widget .lcomment-meta h5 {
-  font: 400 15px/1.35 "Fira Sans", Arial, sans-serif;
+  font: 400 15px/1.35 "Segeo-UI", Arial, sans-serif;
   color: #555;
   margin-bottom: 8px;
 }
@@ -14074,7 +14074,7 @@ figure + .ins-meta {
 }
 
 .sidebar .widget .lcomment-meta span {
-  font: 400 14px/1.3 "Hind", sans-serif;
+  font: 400 14px/1.3 "Segeo-UI", sans-serif;
 }
 
 .sidebar .widget.widget-tagcloud {
@@ -14088,7 +14088,7 @@ figure + .ins-meta {
 }
 
 .sidebar .widget .tagcloud {
-  font: 600 12px/1.5 "Hind", sans-serif;
+  font: 600 12px/1.5 "Segeo-UI", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -14379,7 +14379,7 @@ figure + .ins-meta {
 }
 
 .entry .entry-author .author-content h4 {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   font-weight: 400;
   font-size: 22px;
   margin-bottom: 12px;
@@ -14553,7 +14553,7 @@ figure + .ins-meta {
 }
 
 .comments .comment h4 {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   font-size: 20px;
   color: #666;
   margin-bottom: 15px;
@@ -14569,7 +14569,7 @@ figure + .ins-meta {
 }
 
 .comments .comment .comment-date {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   color: #aeaeae;
 }
 
@@ -14668,7 +14668,7 @@ figure + .ins-meta {
 #portfolio-filter {
   margin: 28px -12px;
   font-size: 0;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
 }
 
 @media (min-width: 992px) {
@@ -14752,7 +14752,7 @@ figure + .ins-meta {
   position: relative;
   float: left;
   width: 100%;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   /* Portfolio Overlay - Masonry Examples*/
 }
 
@@ -14838,7 +14838,7 @@ figure + .ins-meta {
 .portfolio-item .portfolio-title {
   color: #666666;
   margin: 0 0 8px;
-  font: 400 19px/1.2 "Fira Sans", Arial, sans-serif;
+  font: 400 19px/1.2 "Segeo-UI", Arial, sans-serif;
 }
 
 .portfolio-item .portfolio-title a {
@@ -14879,7 +14879,7 @@ figure + .ins-meta {
 }
 
 .portfolio-item.portfolio-overlay {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   overflow: hidden;
 }
 
@@ -14936,7 +14936,7 @@ figure + .ins-meta {
 .portfolio-item.portfolio-overlay .portfolio-title {
   color: #fff;
   margin: 0 0 20px;
-  font: 700 25px/1.08 "Hind", sans-serif;
+  font: 700 25px/1.08 "Segeo-UI", sans-serif;
   text-transform: uppercase;
   max-width: 360px;
 }
@@ -15412,7 +15412,7 @@ figure + .ins-meta {
 }
 
 .slide-portfolio-tags {
-  font: 600 14px/1 "Hind", sans-serif;
+  font: 600 14px/1 "Segeo-UI", sans-serif;
   color: #555;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -15449,7 +15449,7 @@ figure + .ins-meta {
 }
 
 .slide-portfolio-title {
-  font: 700 40px/1 "Fira Sans", Arial, sans-serif;
+  font: 700 40px/1 "Segeo-UI", Arial, sans-serif;
   color: #3e3e3e;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -15520,7 +15520,7 @@ figure + .ins-meta {
 }
 
 #portfolio-details h2 {
-  font: 400 28px/1.1 "Fira Sans", Arial, sans-serif;
+  font: 400 28px/1.1 "Segeo-UI", Arial, sans-serif;
   margin-bottom: 21px;
 }
 
@@ -15529,7 +15529,7 @@ figure + .ins-meta {
 }
 
 .portfolio-details-list {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   color: #9f9f9f;
   font-size: 15px;
   letter-spacing: 0.1em;
@@ -15549,14 +15549,14 @@ figure + .ins-meta {
 
 .portfolio-details-list label {
   display: block;
-  font: 400 15px/1 "Fira Sans", Arial, sans-serif;
+  font: 400 15px/1 "Segeo-UI", Arial, sans-serif;
   text-transform: uppercase;
   color: #777777;
   margin-bottom: 11px;
 }
 
 .portfolio-details-list .portfolio-likes {
-  font: 400 17px/1 "Fira Sans", Arial, sans-serif;
+  font: 400 17px/1 "Segeo-UI", Arial, sans-serif;
   margin-bottom: 37px;
 }
 
@@ -15577,7 +15577,7 @@ figure + .ins-meta {
 }
 
 .portfolio-details-list .portfolio-tags {
-  font: 400 13px/1 "Fira Sans", Arial, sans-serif;
+  font: 400 13px/1 "Segeo-UI", Arial, sans-serif;
   text-transform: uppercase;
   margin-top: 15px;
 }
@@ -15803,7 +15803,7 @@ figure + .ins-meta {
 }
 
 .product-brand {
-  font: 500 14px/1 "Fira Sans", Arial, sans-serif;
+  font: 500 14px/1 "Segeo-UI", Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -15821,7 +15821,7 @@ figure + .ins-meta {
 }
 
 .product-title {
-  font: 400 17px/1.175 "Hind", sans-serif;
+  font: 400 17px/1.175 "Segeo-UI", sans-serif;
   letter-spacing: 0.01em;
   margin-bottom: 12px;
 }
@@ -15835,7 +15835,7 @@ figure + .ins-meta {
 }
 
 .product-price-container {
-  font: 700 0/1 "Fira Sans", Arial, sans-serif;
+  font: 700 0/1 "Segeo-UI", Arial, sans-serif;
   color: #bfbfbf;
   margin-bottom: 16px;
 }
@@ -15890,7 +15890,7 @@ figure + .ins-meta {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  font: 600 0/1 "Hind", sans-serif;
+  font: 600 0/1 "Segeo-UI", sans-serif;
   padding: 15.5px 22px 12.5px;
   border-radius: 28px;
   color: #777777;
@@ -16134,7 +16134,7 @@ figure + .ins-meta {
   z-index: 99;
   right: 16px;
   top: 16px;
-  font: 600 15px/1 "Hind", sans-serif;
+  font: 600 15px/1 "Segeo-UI", sans-serif;
   color: #fff;
   border-radius: 6px 6px 6px 0;
   letter-spacing: 0.03em;
@@ -16205,14 +16205,14 @@ figure + .ins-meta {
 }
 
 .product-countdown .countdown-amount {
-  font: 400 30px/1 "Fira Sans", Arial, sans-serif;
+  font: 400 30px/1 "Segeo-UI", Arial, sans-serif;
   color: #999999;
 }
 
 .product-countdown .countdown-period {
   display: block;
   width: 100%;
-  font: 600 9px/1 "Hind", sans-serif;
+  font: 600 9px/1 "Segeo-UI", sans-serif;
   margin-top: 1px;
   text-transform: uppercase;
   color: #a7a7a7;
@@ -16251,7 +16251,7 @@ figure + .ins-meta {
   top: 50%;
   margin-top: -15px;
   color: #b8b8b8;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
 }
 
 @media (min-width: 1600px) {
@@ -16378,7 +16378,7 @@ figure + .ins-meta {
   min-width: 50px;
   text-align: center;
   white-space: normal;
-  font: 600 0/1 "Hind", sans-serif;
+  font: 600 0/1 "Segeo-UI", sans-serif;
   padding: 0;
   border-radius: 50%;
   line-height: 44px;
@@ -16635,7 +16635,7 @@ figure + .ins-meta {
 }
 
 .product.product3 .product-price-container {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   position: absolute;
   top: 0;
   right: 0;
@@ -16737,7 +16737,7 @@ figure + .ins-meta {
   color: #fff;
   z-index: 200;
   border-radius: 50%;
-  font: 600 0/1.5 "Hind", sans-serif;
+  font: 600 0/1.5 "Segeo-UI", sans-serif;
   text-transform: uppercase;
   padding-top: 10px;
   padding-left: 9px;
@@ -16982,7 +16982,7 @@ figure + .ins-meta {
 
 .product.product4 .product-price-container {
   margin-bottom: 24px;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   font-weight: 500;
   color: #bfbfbf;
 }
@@ -17042,7 +17042,7 @@ figure + .ins-meta {
   margin-bottom: 60px;
 }
 
-@medi (min-width: 992px) {
+@media(min-width: 992px) {
   .product.product5 {
     margin-bottom: 70px;
   }
@@ -17092,7 +17092,7 @@ figure + .ins-meta {
 
 .product.product5 .product-price-container {
   margin-bottom: 14px;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   font-weight: 500;
   color: #bfbfbf;
 }
@@ -17233,7 +17233,7 @@ figure + .ins-meta {
 .product.product6 .product-price-container {
   color: #c2c2c2;
   margin-bottom: 13px;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
 }
 
 .product.product6 .product-price-container .product-old-price,
@@ -17266,7 +17266,7 @@ figure + .ins-meta {
   min-width: 50px;
   text-align: center;
   white-space: normal;
-  font: 600 0/1 "Hind", sans-serif;
+  font: 600 0/1 "Segeo-UI", sans-serif;
   padding: 0;
   border-radius: 50%;
   line-height: 44px;
@@ -17517,7 +17517,7 @@ figure + .ins-meta {
 
 .product.product7 .product-price-container {
   margin-bottom: 12px;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   font-weight: 500;
   color: #d1d1d1;
 }
@@ -17561,7 +17561,7 @@ figure + .ins-meta {
 }
 
 .product.product7 .single-rating {
-  font: 400 0/1.5 "Fira Sans", Arial, sans-serif;
+  font: 400 0/1.5 "Segeo-UI", Arial, sans-serif;
   color: #777;
 }
 
@@ -18780,7 +18780,7 @@ figure + .ins-meta {
   background-color: transparent;
   text-align: center;
   text-transform: uppercase;
-  font: 400 16px/30px "Hind", sans-serif;
+  font: 400 16px/30px "Segeo-UI", sans-serif;
   padding-top: 5px;
 }
 
@@ -18872,7 +18872,7 @@ figure + .ins-meta {
   left: 20px;
   top: 0;
   padding-top: 1px;
-  font: 400 16px/45px "Hind", sans-serif;
+  font: 400 16px/45px "Segeo-UI", sans-serif;
   color: #888888;
   white-space: nowrap;
   opacity: 1;
@@ -18954,7 +18954,7 @@ figure + .ins-meta {
   }
 }
 
-@media (min-width: 1200) and (max-width: 1365px) {
+@media (min-width: 1200px) and (max-width: 1365px) {
   .filter-price-action .btn {
     min-width: 82px;
   }
@@ -19257,7 +19257,7 @@ figure + .ins-meta {
 
 .product-details label {
   display: inline-block;
-  font: 500 15px/1 "Hind", sans-serif;
+  font: 500 15px/1 "Segeo-UI", sans-serif;
   color: #666666;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -19335,7 +19335,7 @@ figure + .ins-meta {
 .product-details .product-price-container .product-old-price {
   font-size: 19px;
   font-weight: 500;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
 }
 
 @media (min-width: 1600px) {
@@ -19357,7 +19357,7 @@ figure + .ins-meta {
   display: inline-block;
   vertical-align: middle;
   color: #bbbbbb;
-  font: 400 15px/1.3 "Hind", sans-serif;
+  font: 400 15px/1.3 "Segeo-UI", sans-serif;
   margin-left: 8px;
 }
 
@@ -19382,7 +19382,7 @@ figure + .ins-meta {
 
 .product-meta-list li {
   color: #999999;
-  font: 400 15px/1.625 "Hind", sans-serif;
+  font: 400 15px/1.625 "Segeo-UI", sans-serif;
 }
 
 @media (min-width: 1600px) {
@@ -19504,7 +19504,7 @@ figure + .ins-meta {
   height: auto;
   font-size: 17px;
   text-align: center;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   margin-bottom: 0;
   padding: 11.5px 10px 8.5px;
 }
@@ -19980,7 +19980,7 @@ figure + .ins-meta {
 .product-details-section .table.details-table tbody > tr > td {
   text-align: left;
   color: #777777;
-  font: 400 16px/1.5 "Fira Sans", Arial, sans-serif;
+  font: 400 16px/1.5 "Segeo-UI", Arial, sans-serif;
   padding: 8px 40px;
 }
 
@@ -20436,7 +20436,7 @@ figure + .ins-meta {
 
 .product-review-section .rating-label {
   color: #737373;
-  font: 400 17px/1 "Hind", sans-serif;
+  font: 400 17px/1 "Segeo-UI", sans-serif;
   vertical-align: middle;
   margin-right: 8px;
   letter-spacing: 0.1em;
@@ -20645,7 +20645,7 @@ figure + .ins-meta {
 }
 
 .product-review .review-media h4 {
-  font: italic 400 16px/1 "Fira Sans", Arial, sans-serif;
+  font: italic 400 16px/1 "Segeo-UI", Arial, sans-serif;
   color: #666666;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -20717,7 +20717,7 @@ figure + .ins-meta {
 
 .product-review .review-content .review-date {
   color: #ababab;
-  font: italic 400 16px/1 "Fira Sans", Arial, sans-serif;
+  font: italic 400 16px/1 "Segeo-UI", Arial, sans-serif;
 }
 
 /* ----------- 11.Cart Page ----------
@@ -20743,7 +20743,7 @@ figure + .ins-meta {
   text-align: center;
   color: #666666;
   text-transform: uppercase;
-  font: 500 15px/1.4 "Fira Sans", Arial, sans-serif;
+  font: 500 15px/1.4 "Segeo-UI", Arial, sans-serif;
   letter-spacing: 0.08em;
   text-align: center;
   padding: 20px 5px;
@@ -20828,7 +20828,7 @@ figure + .ins-meta {
 }
 
 .product-col .product ul {
-  font: 400 15px/1.33 "Hind", sans-serif;
+  font: 400 15px/1.33 "Segeo-UI", sans-serif;
   color: #b7b7b7;
 }
 
@@ -20844,7 +20844,7 @@ figure + .ins-meta {
 }
 
 .code-col {
-  font: 400 16px/1.5 "Hind", sans-serif;
+  font: 400 16px/1.5 "Segeo-UI", sans-serif;
   color: #999;
   min-width: 130px;
 }
@@ -20895,7 +20895,7 @@ figure + .ins-meta {
   text-align: center;
   font-size: 18px;
   line-height: 1;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   color: #9a9a9a;
   border-radius: 5px;
   margin-bottom: 0;
@@ -20904,7 +20904,7 @@ figure + .ins-meta {
 
 .unit-price-col,
 .subtotal-col {
-  font: 700 16px/1.5 "Fira Sans", Arial, sans-serif;
+  font: 700 16px/1.5 "Segeo-UI", Arial, sans-serif;
   color: #00aeff;
 }
 
@@ -21028,7 +21028,7 @@ figure + .ins-meta {
 
 .vertical-tab-container .tab-content {
   padding: 20px 20px;
-  font: 400 15px/1.5 "Hind", sans-serif;
+  font: 400 15px/1.5 "Segeo-UI", sans-serif;
   color: #777777;
 }
 
@@ -21164,7 +21164,7 @@ figure + .ins-meta {
 
 .table.total-table tr td {
   padding: 20px 28px;
-  font: 400 15px/20px "Fira Sans", Arial, sans-serif;
+  font: 400 15px/20px "Segeo-UI", Arial, sans-serif;
   vertical-align: middle;
 }
 
@@ -21208,7 +21208,7 @@ figure + .ins-meta {
 }
 
 .compare-table.table tbody > tr.info-row {
-  font: 400 16px/1.5 "Hind", sans-serif;
+  font: 400 16px/1.5 "Segeo-UI", sans-serif;
   color: #999999;
 }
 
@@ -21261,14 +21261,14 @@ figure + .ins-meta {
 .table-title {
   color: #666666;
   text-transform: uppercase;
-  font: 500 15px/1.4 "Fira Sans", Arial, sans-serif;
+  font: 500 15px/1.4 "Segeo-UI", Arial, sans-serif;
   letter-spacing: 0.08em;
 }
 
 /* ----------- 13.Checkout Page ----------
 --------------------------------------*/
 .checkout-section {
-  font: 400 17px/1.35 "Hind", sans-serif;
+  font: 400 17px/1.35 "Segeo-UI", sans-serif;
   color: #777777;
 }
 
@@ -21323,7 +21323,7 @@ figure + .ins-meta {
 
 .checkout-table.cart-table tbody > tr.total-row td {
   padding: 20px 28px;
-  font: 400 15px/20px "Fira Sans", Arial, sans-serif;
+  font: 400 15px/20px "Segeo-UI", Arial, sans-serif;
   vertical-align: middle;
   text-transform: uppercase;
   background-color: #fff;
@@ -21469,7 +21469,7 @@ figure + .ins-meta {
   display: inline-block;
   padding-left: 65px;
   position: relative;
-  font: 400 14px/1.35 "Hind", sans-serif;
+  font: 400 14px/1.35 "Segeo-UI", sans-serif;
   color: #999999;
 }
 
@@ -21492,7 +21492,7 @@ figure + .ins-meta {
 }
 
 .contact-info h3 {
-  font: 500 17px/1 "Fira Sans", Arial, sans-serif;
+  font: 500 17px/1 "Segeo-UI", Arial, sans-serif;
   color: #777777;
   text-transform: uppercase;
   margin-bottom: 14px;
@@ -21723,7 +21723,7 @@ figure + .ins-meta {
 }
 
 .error-page h1, .error-page h2 {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   color: #3e3e3e;
 }
 
@@ -21903,7 +21903,7 @@ figure + .ins-meta {
 --------------------------------------*/
 .new-customer-section,
 .registered-customer-section {
-  font: 400 17px/1.35 "Hind", sans-serif;
+  font: 400 17px/1.35 "Segeo-UI", sans-serif;
   color: #777;
 }
 
@@ -22688,7 +22688,7 @@ button.swiper-pagination-bullet {
   text-align: center;
   color: #f6f6f6;
   background-color: #7ccbfb;
-  font: 400 16px/1.2 "Hind", sans-serif;
+  font: 400 16px/1.2 "Segeo-UI", sans-serif;
   letter-spacing: 0;
 }
 
@@ -22707,7 +22707,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer-newsletter h4 {
-  font: 500 25px/1 "Fira Sans", Arial, sans-serif;
+  font: 500 25px/1 "Segeo-UI", Arial, sans-serif;
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 12px;
@@ -22758,7 +22758,7 @@ button.swiper-pagination-bullet {
 .footer-newsletter .form-control {
   border: none;
   height: 43px;
-  font: 400 16px/1.8 "Hind", sans-serif;
+  font: 400 16px/1.8 "Segeo-UI", sans-serif;
   padding: 8px 130px 7px 20px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #555555;
@@ -22808,7 +22808,7 @@ button.swiper-pagination-bullet {
   top: 0;
   font-weight: 600;
   font-size: 14px;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   text-transform: uppercase;
   min-width: 110px;
   text-align: center;
@@ -22879,7 +22879,7 @@ button.swiper-pagination-bullet {
   background-color: #f1f1f1;
   color: #999999;
   letter-spacing: 0.5px;
-  font: 400 14px/1.35 "Hind", sans-serif;
+  font: 400 14px/1.35 "Segeo-UI", sans-serif;
   overflow: hidden;
 }
 
@@ -22896,7 +22896,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer .widget .widget-title {
-  font: 500 16px/1.2 "Fira Sans", Arial, sans-serif;
+  font: 500 16px/1.2 "Segeo-UI", Arial, sans-serif;
   letter-spacing: 0.6px;
   margin: -2px 0 25px;
   text-transform: uppercase;
@@ -23129,7 +23129,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer .widget .products-list .product-price-container {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   margin-bottom: 0;
 }
 
@@ -23181,7 +23181,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer .widget .products-list.v2 .product-price-container {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
 }
 
 .footer .widget .products-list.v2 .product-price-container .product-old-price {
@@ -23551,7 +23551,7 @@ button.swiper-pagination-bullet {
 
 .footer .widget .pentry-meta span,
 .footer .widget .pentry-meta h5 {
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   font-size: 15px;
   line-height: 1.3;
 }
@@ -23666,7 +23666,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer .widget .tweets-list .tweet-top .tweet-user p {
-  font: 400 15px/1.2 "Fira Sans", Arial, sans-serif;
+  font: 400 15px/1.2 "Segeo-UI", Arial, sans-serif;
   margin-bottom: 0;
 }
 
@@ -23702,7 +23702,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer-top .widget .widget-title {
-  font: 700 16px/1 "Hind", sans-serif;
+  font: 700 16px/1 "Segeo-UI", sans-serif;
   color: #555555;
   margin: 0 0 25px;
 }
@@ -23838,7 +23838,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer-bottom .payment-info h5 {
-  font: 700 14px/1.25 "Fira Sans", Arial, sans-serif;
+  font: 700 14px/1.25 "Segeo-UI", Arial, sans-serif;
   color: #a8a8a8;
   margin: -2px 0 4px;
   text-transform: uppercase;
@@ -24247,7 +24247,7 @@ button.swiper-pagination-bullet {
 
 .footer.footer4 .widget .widget-title {
   color: #dedede;
-  font-family: "Hind", sans-serif;
+  font-family: "Segeo-UI", sans-serif;
   margin-bottom: 34px;
   padding-top: 10px;
 }
@@ -24323,7 +24323,7 @@ button.swiper-pagination-bullet {
   margin-bottom: 20px;
 }
 
-.footer.footer4 .widget .products-list .product:last-cihld {
+.footer.footer4 .widget .products-list .product:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -24337,7 +24337,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer.footer4 .widget .products-list .product-price-container {
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   color: #afafaf;
 }
 
@@ -24903,7 +24903,7 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   min-height: 100vh;
   color: #484f52;
-  font: 400 16px/1.25 "Hind", sans-serif;
+  font: 400 16px/1.25 "Segeo-UI", sans-serif;
 }
 
 @media (min-width: 1200px) {
@@ -24950,7 +24950,7 @@ button.swiper-pagination-bullet {
 
 .coming-soon h1 {
   color: #fff;
-  font: 700 42px/0.9 "Fira Sans", Arial, sans-serif;
+  font: 700 42px/0.9 "Segeo-UI", Arial, sans-serif;
   text-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -25067,7 +25067,7 @@ button.swiper-pagination-bullet {
 .coming-soon .countdown-section {
   display: block;
   float: left;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Segeo-UI", Arial, sans-serif;
   color: #044657;
 }
 
@@ -25138,4 +25138,9 @@ button.swiper-pagination-bullet {
 .coming-soon .countdown-descr {
   display: block;
   width: 100%;
+}
+
+@font-face {
+  font-family: "Segeo-UI";
+  src: url('{{ asset('fonts\front\fonts\Segoe UI.ttf') }}');
 }

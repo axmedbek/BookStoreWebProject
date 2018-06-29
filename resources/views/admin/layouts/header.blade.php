@@ -9,7 +9,7 @@
     <meta name="keywords"
           content="@yield('keywords')">
     <meta name="author" content="Axmedbek">
-    <title>@yield('title') | Tshirt Admin Panel</title>
+    <title>@yield('title') | Bookstore Admin Panel</title>
     <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('images/admin/ico/apple-icon-60.png') }}">
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('images/admin/ico/apple-icon-76.png') }}">
     <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('images/admin/ico/apple-icon-120.png') }}">
@@ -53,11 +53,8 @@
                 <li class="nav-item mobile-menu hidden-md-up float-xs-left"><a
                             class="nav-link nav-menu-main menu-toggle hidden-xs"><i class="icon-menu5 font-large-1"></i></a>
                 </li>
-                <li class="nav-item"><a href="index.html" class="navbar-brand nav-link"><img alt="branding logo"
-                                                                                             src="{{ asset('images/admin/logo/robust-logo-light.png') }}"
-                                                                                             data-expand="{{ asset('images/admin/logo/robust-logo-light.png') }}"
-                                                                                             data-collapse="{{ asset('images/admin/logo/robust-logo-small.png') }}"
-                                                                                             class="brand-logo"></a>
+                <li class="nav-item"><a href="{{ route('admin_page') }}" class="navbar-brand nav-link"
+                                        style="color: #fbf87bbd;font-size: 34px;margin-left: 20px;font-weight: 700;">Swotline</a>
                 </li>
                 <li class="nav-item hidden-md-up float-xs-right"><a data-toggle="collapse" data-target="#navbar-mobile"
                                                                     class="nav-link open-navbar-container"><i
@@ -259,14 +256,14 @@
                                                                    class="dropdown-toggle nav-link dropdown-user-link"><span
                                     class="avatar avatar-online"><img
                                         src="{{ asset('images/admin/portrait/small/avatar-s-1.png') }}" alt="avatar"><i></i></span><span
-                                    class="user-name">John Doe</span></a>
+                                    class="user-name">{{ auth()->user()->name." ".auth()->user()->surname }}</span></a>
                         <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item"><i
                                         class="icon-head"></i> Edit Profile</a><a href="#" class="dropdown-item"><i
                                         class="icon-mail6"></i> My Inbox</a><a href="#" class="dropdown-item"><i
                                         class="icon-clipboard2"></i> Task</a><a href="#" class="dropdown-item"><i
                                         class="icon-calendar5"></i> Calender</a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item"><i class="icon-power3"></i> Logout</a>
+                            <a href="{{ route('logout') }}" class="dropdown-item"><i class="icon-power3"></i> Logout</a>
                         </div>
                     </li>
                 </ul>

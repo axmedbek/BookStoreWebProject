@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Model\Role;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -21,19 +22,8 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-    public function getAuthPassword()
-    {
-        return $this->password;
+    public function role(){
+        return $this->belongsTo(Role::class,'role_id');
     }
-
 
 }

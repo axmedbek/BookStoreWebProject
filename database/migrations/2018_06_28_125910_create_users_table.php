@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('mob_phone2')->nullable();
             $table->string('zip_code');
             $table->string('address');
+            $table->unsignedInteger('role_id')->default(2);
             $table->string('city');
             $table->string('activation_code')->nullable();
             $table->string('password');

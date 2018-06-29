@@ -35,7 +35,7 @@
                             <form action="{{ route('login_process') }}" method="post">
                                 {{ csrf_field() }}
                                 <div class="form-group label-overlay">
-                                    <input type="email" class="form-control" name="email" required>
+                                    <input type="text" class="form-control" name="email" required>
                                     <label class="input-desc"><i class="icon input-icon input-email"></i>Enter your email <span class="input-required">*</span></label>
                                 </div><!-- End .form-group -->
                                 <div class="form-group label-overlay">
