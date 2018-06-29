@@ -15,6 +15,7 @@ class CreateMskCitiesTable extends Migration
     {
         Schema::create('msk_cities', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->timestamps();
         });
     }

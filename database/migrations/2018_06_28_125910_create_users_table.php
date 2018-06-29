@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('zip_code');
             $table->string('address');
             $table->unsignedInteger('role_id')->default(2);
-            $table->string('city');
+            $table->string('city_id');
             $table->string('activation_code')->nullable();
             $table->string('password');
             $table->boolean('is_active')->default(0);

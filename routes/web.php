@@ -41,5 +41,8 @@ Route::get('/product/{productName}', 'Front\ProductController@index')->name('pro
 Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get('/', 'Admin\DashboardController@index')->name('admin_page');
     Route::get('/msk/cities','Admin\Msk\CityController@index')->name('msk_cities');
+    Route::post('/msk/cities/save','Admin\Msk\CityController@save')->name('msk_cities.save');
+    Route::post('/msk/cities/delete','Admin\Msk\CityController@delete')->name('msk_cities.delete');
+
 });
 

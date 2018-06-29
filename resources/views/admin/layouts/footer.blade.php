@@ -6,7 +6,6 @@
                     class="icon-heart5 pink"></i></span></p>
 </footer>
 
-@yield('js')
 <!-- BEGIN VENDOR JS-->
 <script src="{{ asset('js/admin/jquery.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/admin/tether.min.js') }}" type="text/javascript"></script>
@@ -28,5 +27,9 @@
 <!-- BEGIN PAGE LEVEL JS-->
 <script src="{{ asset('js/admin/dashboard-lite.js') }}" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+@yield('js')
+
 </body>
 </html>

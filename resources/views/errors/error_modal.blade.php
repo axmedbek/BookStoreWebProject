@@ -1,7 +1,7 @@
-@if(count($errors))
+@if(count($errors) > 0)
     <div class="alert alert-danger">
         @foreach($errors as $error)
-            $error
-        @endif
+            {{ $error }}
+        @endforeach
     </div>
 @endif
