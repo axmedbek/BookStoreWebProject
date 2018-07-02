@@ -34,6 +34,8 @@ Route::group(['middleware' => 'guest'],function(){
 });
 
 Route::get('/product/{productName}', 'Front\ProductController@index')->name('product_page');
+Route::get('/select2/select_requests','SelectController@index')->name('select_route');
+Route::get('/category/{categoryName}','Admin\CategoryController@findCategoryByName')->name('category.page');
 
 
 //admin routes
@@ -43,6 +45,9 @@ Route::group(['prefix' => 'admin','middleware' => 'admin'], function () {
     Route::get('/msk/cities','Admin\Msk\CityController@index')->name('msk_cities');
     Route::post('/msk/cities/save','Admin\Msk\CityController@save')->name('msk_cities.save');
     Route::post('/msk/cities/delete','Admin\Msk\CityController@delete')->name('msk_cities.delete');
+    Route::get('/category','Admin\CategoryController@index')->name('admin_category');
+    Route::post('/category/save','Admin\CategoryController@saveCategory')->name('category.save');
+    Route::post('/category/delete','Admin\CategoryController@deleteCategory')->name('category.delete');
 
 });
 

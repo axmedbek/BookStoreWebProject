@@ -141,6 +141,9 @@ The following part can be removed on Server for On Demand Loading) -->
 <script type="text/javascript" src="{{ asset('js/front/extensions/revolution.extension.parallax.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/front/extensions/revolution.extension.slideanims.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/front/extensions/revolution.extension.video.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/select2.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/select2_locale_tr.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
 @yield("js")
 </body>
 </html>

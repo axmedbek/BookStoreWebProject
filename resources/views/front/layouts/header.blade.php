@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="{{ asset('css/front/style.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
           integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/select2.css') }}">
     @yield("css")
 </head>
 <body>
@@ -231,18 +232,6 @@
                                                 <img src="{{ asset('images/front/images/flags/france.jpg') }}"
                                                      alt="France Flag">
                                                 <span>French</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/images/flags/germany.jpg" alt="Germany Flag">
-                                                <span>German</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <img src="assets/images/flags/italy.jpg" alt="Italy Flag">
-                                                <span>Italian</span>
                                             </a>
                                         </li>
                                     </ul>

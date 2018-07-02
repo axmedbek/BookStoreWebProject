@@ -20,7 +20,7 @@
                             <li class="product">
                                 <figure>
                                     <a href="#">
-                                        <img src="assets/images/products/thumbs/product1.jpg" alt="Product">
+                                        <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
                                     </a>
                                     <span class="product-label discount">-25%</span>
                                 </figure>
@@ -37,7 +37,7 @@
                             <li class="product">
                                 <figure>
                                     <a href="#">
-                                        <img src="assets/images/products/thumbs/product2.jpg" alt="Product">
+                                        <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
                                     </a>
                                 </figure>
                                 <div class="product-meta">
@@ -52,7 +52,7 @@
                             <li class="product">
                                 <figure>
                                     <a href="#">
-                                        <img src="assets/images/products/thumbs/product3.jpg" alt="Product">
+                                        <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
                                     </a>
                                 </figure>
                                 <div class="product-meta">
@@ -74,7 +74,7 @@
                             <li class="product">
                                 <figure>
                                     <a href="#">
-                                        <img src="assets/images/products/thumbs/product4.jpg" alt="Product">
+                                        <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
                                     </a>
                                 </figure>
                                 <div class="product-meta">
@@ -90,7 +90,7 @@
                             <li class="product">
                                 <figure>
                                     <a href="#">
-                                        <img src="assets/images/products/thumbs/product5.jpg" alt="Product">
+                                        <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
                                     </a>
                                     <span class="product-label">New</span>
                                 </figure>
@@ -106,7 +106,7 @@
                             <li class="product">
                                 <figure>
                                     <a href="#">
-                                        <img src="assets/images/products/thumbs/product6.jpg" alt="Product">
+                                        <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
                                     </a>
                                 </figure>
                                 <div class="product-meta">
@@ -129,7 +129,7 @@
                             <li class="product">
                                 <figure>
                                     <a href="#">
-                                        <img src="assets/images/products/thumbs/product7.jpg" alt="Product">
+                                        <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
                                     </a>
                                 </figure>
                                 <div class="product-meta">
@@ -145,7 +145,7 @@
                             <li class="product">
                                 <figure>
                                     <a href="#">
-                                        <img src="assets/images/products/thumbs/product8.jpg" alt="Product">
+                                        <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
                                     </a>
                                     <span class="product-label discount">-40%</span>
                                 </figure>
@@ -161,7 +161,7 @@
                             <li class="product">
                                 <figure>
                                     <a href="#">
-                                        <img src="assets/images/products/thumbs/product9.jpg" alt="Product">
+                                        <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
                                     </a>
                                     <span class="product-label outofstock">Out Of<br>Stock</span>
                                 </figure>
@@ -184,7 +184,7 @@
                             <li class="product">
                                 <figure>
                                     <a href="#">
-                                        <img src="assets/images/products/thumbs/product10.jpg" alt="Product">
+                                        <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
                                     </a>
                                     <span class="product-label">New</span>
                                 </figure>
@@ -201,7 +201,7 @@
                             <li class="product">
                                 <figure>
                                     <a href="#">
-                                        <img src="assets/images/products/thumbs/product11.jpg" alt="Product">
+                                        <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
                                     </a>
                                 </figure>
                                 <div class="product-meta">
@@ -217,7 +217,7 @@
                             <li class="product">
                                 <figure>
                                     <a href="#">
-                                        <img src="assets/images/products/thumbs/product12.jpg" alt="Product">
+                                        <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
                                     </a>
                                 </figure>
                                 <div class="product-meta">

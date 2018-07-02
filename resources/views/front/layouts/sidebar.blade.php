@@ -4,31 +4,35 @@
             Kateqorİyalar
             <i class="icon cat-title-icon"></i>
         </h3>
-        <ul class="category-list">
-            <li>
-                <a href="#">
-                    Bədii kitablar
-                    <i class="fa fa-book" style="float: right;"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Dərs kitabları
-                    <i class="fa fa-graduation-cap" style="float: right;"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Tibb kitabları
-                    <i class="fa fa-briefcase-medical" style="float: right;"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Uşaq kitabları
-                    <i class="fa fa-child" style="float: right;"></i>
-                </a>
-            </li>
+        <ul class="category-list" id="category_ul">
+            @foreach(\App\Category::all() as $category)
+                <li>
+                    <a href="{{ route('category.page',str_slug($category->name)) }}">
+                        {{ $category->name }}
+                        <i class="{{ $category->icon }}" style="float: right;"></i>
+                        <ul class="category-list" style="display: none;">
+                            <li>
+                                <a href="#">
+                                    Test
+                                    <i class="" style="float: right;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Test
+                                    <i class="" style="float: right;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Test
+                                    <i class="" style="float: right;"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+            @endforeach
         </ul>
     </div><!-- End .widget -->
 
@@ -51,7 +55,8 @@
                     <div class="product product-sm">
                         <figure>
                             <a href="#">
-                                <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}" alt="Product">
+                                <img src="{{ asset('images/front/images/products/thumbs/product1.jpg') }}"
+                                     alt="Product">
                             </a>
                             <span class="product-label discount">-25%</span>
                         </figure>
@@ -68,7 +73,8 @@
                     <div class="product product-sm">
                         <figure>
                             <a href="#">
-                                <img src="{{ asset('images/front/images/products/thumbs/product2.jpg') }}" alt="Product">
+                                <img src="{{ asset('images/front/images/products/thumbs/product2.jpg') }}"
+                                     alt="Product">
                             </a>
                         </figure>
                         <div class="product-meta">
@@ -83,7 +89,8 @@
                     <div class="product product-sm">
                         <figure>
                             <a href="#">
-                                <img src="{{ asset('images/front/images/products/thumbs/product3.jpg') }}" alt="Product">
+                                <img src="{{ asset('images/front/images/products/thumbs/product3.jpg') }}"
+                                     alt="Product">
                             </a>
                         </figure>
                         <div class="product-meta">
@@ -101,7 +108,8 @@
                     <div class="product product-sm">
                         <figure>
                             <a href="#">
-                                <img src="{{ asset('images/front/images/products/thumbs/product4.jpg') }}" alt="Product">
+                                <img src="{{ asset('images/front/images/products/thumbs/product4.jpg') }}"
+                                     alt="Product">
                             </a>
                         </figure>
                         <div class="product-meta">
@@ -116,7 +124,8 @@
                     <div class="product product-sm">
                         <figure>
                             <a href="#">
-                                <img src="{{ asset('images/front/images/products/thumbs/product5.jpg') }}" alt="Product">
+                                <img src="{{ asset('images/front/images/products/thumbs/product5.jpg') }}"
+                                     alt="Product">
                             </a>
                             <span class="product-label new">NEW</span>
                         </figure>
@@ -133,7 +142,8 @@
                     <div class="product product-sm">
                         <figure>
                             <a href="#">
-                                <img src="{{ asset('images/front/images/products/thumbs/product6.jpg') }}" alt="Product">
+                                <img src="{{ asset('images/front/images/products/thumbs/product6.jpg') }}"
+                                     alt="Product">
                             </a>
                         </figure>
                         <div class="product-meta">
@@ -166,7 +176,8 @@
                             <div class="product-top">
                                 <figure>
                                     <a href="#">
-                                        <img src="{{ asset('images/front/images/products/product23.jpg') }}" alt="Product Image">
+                                        <img src="{{ asset('images/front/images/products/product23.jpg') }}"
+                                             alt="Product Image">
                                     </a>
                                 </figure>
                             </div><!-- End .product-top -->
@@ -198,7 +209,8 @@
                             <div class="product-top">
                                 <figure>
                                     <a href="#">
-                                        <img src="{{ asset('images/front/images/products/product11.jpg') }}" alt="Product Image">
+                                        <img src="{{ asset('images/front/images/products/product11.jpg') }}"
+                                             alt="Product Image">
                                     </a>
                                 </figure>
                             </div><!-- End .product-top -->
@@ -442,3 +454,13 @@
         </div><!-- End .widget-body -->
     </div><!-- End .widget -->
 </aside>
+
+@section('js')
+    <script>
+        $("#category_ul>li").each(function () {
+            $(this).on('click',function(){
+                $(this).find('ul').slideToggle("slow");
+            });
+        });
+    </script>
+@endsection

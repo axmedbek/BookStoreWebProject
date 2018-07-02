@@ -255,7 +255,7 @@
                     <li class="dropdown dropdown-user nav-item"><a href="#" data-toggle="dropdown"
                                                                    class="dropdown-toggle nav-link dropdown-user-link"><span
                                     class="avatar avatar-online"><img
-                                        src="{{ asset('images/admin/portrait/small/avatar-s-1.png') }}" alt="avatar"><i></i></span><span
+                                        src="{{ asset('images/front/images/profile_images/'.auth()->user()->profile_img) }}" alt="avatar"><i></i></span><span
                                     class="user-name">{{ auth()->user()->name." ".auth()->user()->surname }}</span></a>
                         <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item"><i
                                         class="icon-head"></i> Edit Profile</a><a href="#" class="dropdown-item"><i
