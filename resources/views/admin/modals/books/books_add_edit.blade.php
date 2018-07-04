@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <label for="bookName">Kitabın adı</label>
                             <input type="text" name="bookName" class="form-control border-primary"
-                                   placeholder="Kitabın adını daxil edin">
+                                   placeholder="Kitabın adını daxil edin" value="{{ $bookObj['name'] }}">
                         </div>
                         <div class="form-group">
                             <label for="writerName">Yazar adı</label>
@@ -71,21 +71,21 @@
                         <div class="form-group">
                             <label>Qiyməti</label>
                             <input name="cost" class="form-control border-primary" type="number"
-                                   placeholder="Qiyməti daxil edin" step="0.1" min="0">
+                                   placeholder="Qiyməti daxil edin" step="0.1" min="0" value="{{ $bookObj['cost'] }}">
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
                             <label>Səhifə sayı</label>
                             <input name="pageCount" class="form-control border-primary" type="number"
-                                   placeholder="Səhifə sayını daxil edin" min="1">
+                                   placeholder="Səhifə sayını daxil edin" min="1" value="{{ $bookObj['page_count'] }}">
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
                             <label>Stock sayı</label>
                             <input name="stock_count" class="form-control border-primary" type="number"
-                                   placeholder="Stock sayını daxil edin" min="0">
+                                   placeholder="Stock sayını daxil edin" min="0" value="{{ $bookObj['stock_count'] }}">
                         </div>
                     </div>
                 </div>
@@ -95,21 +95,21 @@
                         <div class="form-group">
                             <label>Dərc olunma tarixi</label>
                             <input name="publishing_date" class="form-control border-primary" type="text"
-                                   placeholder="Dərc olunma tarixini daxil edin">
+                                   placeholder="Dərc olunma tarixini daxil edin" value="{{ isset($bookObj['publishing_date']) ? date('d-m-Y',strtotime($bookObj['publishing_date'])) : '' }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>ISBN</label>
                             <input class="form-control border-primary" type="number" name="isbn"
-                                   placeholder="ISBN nömrəsini daxil edin" min="0">
+                                   placeholder="ISBN nömrəsini daxil edin" min="0" value="{{ $bookObj['isbn'] }}">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Dərc sayı</label>
                             <input name="publishing_count" class="form-control border-primary" type="number"
-                                   placeholder="Dərc sayını daxil edin" min="1">
+                                   placeholder="Dərc sayını daxil edin" min="1" value="{{ $bookObj['publishing_count'] }}">
                         </div>
                     </div>
                 </div>

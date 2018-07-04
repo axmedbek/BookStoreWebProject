@@ -20,8 +20,17 @@ class BookController extends Controller
 
     public function addEditBook($book)
     {
+        $bookObj = Book::find($book);
+        $data = [
+            'book' => $book,
+            'bookObj' => $bookObj
+        ];
+        return view('admin.modals.books.books_add_edit', $data);
+    }
 
-        return view('admin.modals.books_add_edit', compact('book'));
+    public function infoBook($book){
+        $bookObj = Book::find($book);
+        return view('admin.modals.books.books_info', compact('bookObj'));
     }
 
     public function addEditBookAction(Request $request, $book)
@@ -67,6 +76,21 @@ class BookController extends Controller
                 $bookObj->book_writers()->detach();
                 $bookObj->book_writers()->attach(explode(",", $request->get('writerName')));
             }
+        }
+    }
+
+    public function deleteBook(Request $request){
+        $validator = Validator::make($request->all(),[
+
+        ]);
+
+        if ($validator->fails()){
+
+        }
+        else{
+            $bookObj = Book::find($request->get('id'));
+            $bookObj->delete();
+            return response()->json(['status' => 'ok']);
         }
     }
 }

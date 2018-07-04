@@ -7,16 +7,22 @@
                 <div class="card-header">
                     <h4 class="card-title">Kitablar</h4>
 
-                    <a type="button" href="javascript:openModal('{{ route('book.add_edit.modal',['book' => 0]) }}')" class="btn btn-info"  style="float: right;">Yeni</a>
+                    <a type="button" href="javascript:openModal('{{ route('book.add_edit.modal',['book' => 0]) }}')"
+                       class="btn btn-success" style="float: right;">Yeni</a>
                 </div>
                 <div class="card-body collapse in">
                     <div class="table-responsive">
-                        <table class="table city_table">
+                        <table class="table book_table">
                             <thead class="bg-primary">
                             <tr>
                                 <th>#</th>
                                 <th>Adı</th>
-                                <th style="float: right">Əməliyyat</th>
+                                <th>Şəkili</th>
+                                <th>Kateqoriya</th>
+                                <th>Yazıçı</th>
+                                <th>Qiyməti</th>
+                                <th>Statusu</th>
+                                <th style="float: right;min-width: 170px;">Əməliyyat</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -24,11 +30,32 @@
                                 <tr tr_id="{{ $book->id }}">
                                     <td scope="row"></td>
                                     <td>{{ $book->name }}</td>
+                                    <td><img src="{{ asset('images/front/images/book_images/'.$book->book_img) }}"
+                                             alt="{{ str_slug($book->name) }} image" width="60px"></td>
+                                    <td>{{ $book->category->name }}/{{ $book->sub_category->name }}</td>
+                                    <td>
+                                        @foreach($book->book_writers as $key => $writer)
+                                            {{ $writer->name }} {{ sizeof($book->book_writers) > $key + 1 ? ',' : ''}}
+                                        @endforeach
+                                    </td>
+                                    <td>{{ sprintf("%.2f",$book->cost) }} Azn</td>
+                                    <td>
+                                        <div class="tag tag-pill tag-{{
+                                    $book->book_status_id == 1 ? 'danger' :
+                                    $book->book_status_id == 2 ? 'success' :
+                                    'info' }}">{{{ $book->book_status->name }}}</div>
+                                    </td>
                                     <td style="float: right;">
-                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="editCity(this)">
-                                            <i class="icon-pencil3"></i>
+                                        <a type="button"
+                                           href="javascript:openModal('{{ route('book.info.modal',['book' => $book->id]) }}')"
+                                           class="btn btn-info btn-sm"><i class="icon-information-circled"></i></a>
                                         </a>
-                                        <a href="javascript:void(0)" class="btn btn-danger" onclick="deleteCity(this)">
+                                        <a type="button"
+                                           href="javascript:openModal('{{ route('book.add_edit.modal',['book' => $book->id]) }}')"
+                                           class="btn btn-success btn-sm"><i
+                                                    class="icon-pencil3"></i></a>
+                                        <a href="javascript:void(0)" class="btn btn-danger btn-sm"
+                                           onclick="deleteBook(this)">
                                             <i class="icon-trash-o"></i>
                                         </a>
                                     </td>
@@ -42,142 +69,19 @@
         </div>
     </div>
 
-
 @endsection
 @section('title','Kitablar')
 @section('css')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
 @endsection
 @section('js')
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
     <script>
 
-        function addCity(element) {
-            if ($('.city_table>tbody>tr').is('[tr_id="0"]')) return;
-            $('.city_table>tbody').prepend('' +
-                '<tr tr_id="0">' +
-                '<td></td>' +
-                '<td>' +
-                '<input type="text" name="name" class="form-control">' +
-                '</td>' +
-                '<td style="float: right;">' +
-                '<a href="javascript:void(0)" class="btn btn-success" onclick="saveCity(this)">\n' +
-                '                                        <i class="icon-save"></i>\n' +
-                '                                    </a>\n' +
-                '                                    <button type="button" class="btn btn-warning cancelCity">\n' +
-                '                                        <i class="icon-remove"></i>\n' +
-                '                                    </button>' +
-                '</td>' +
-                '</tr>');
-            orderTable();
-
-            $('.cancelCity').on('click', function () {
-                $(this).parents('tr:eq(0)').remove();
-                orderTable();
-            });
-        }
-
-        function editCity(element) {
-            var tr = $(element).parents('tr:eq(0)'),
-                tr_id = tr.attr('tr_id'),
-                name = tr.find('td:eq(1)').text();
-            tr.html();
-            tr.html(
-                '<td></td>' +
-                '<td>' +
-                '<input type="text" name="name" class="form-control" value="' + name + '">' +
-                '</td>' +
-                '<td style="float: right;">' +
-                '<a href="javascript:void(0)" class="btn btn-success" onclick="saveCity(this)">' +
-                '                                        <i class="icon-save"></i>' +
-                '                                    </a>' +
-                '                                     <button type="button" class="btn btn-warning cancelCity">' +
-                '                                                        <i class="icon-remove"></i>' +
-                '                                                    </button>' +
-                '</td>');
-            orderTable();
-            $('.cancelCity').on('click', function () {
-                tr.html();
-                tr.html('<td scope="row"></td>\n' +
-                    '                                <td>' + name + '</td>\n' +
-                    '                                <td style="float: right;">\n' +
-                    '                                    <a href="javascript:void(0)" class="btn btn-primary" onclick="editCity(this)">\n' +
-                    '                                        <i class="icon-pencil3"></i>\n' +
-                    '                                    </a>\n' +
-                    '                                    <a href="javascript:void(0)" class="btn btn-danger" onclick="deleteCity(this)">\n' +
-                    '                                        <i class="icon-trash-o"></i>\n' +
-                    '                                    </a>\n' +
-                    '                                </td>');
-                orderTable();
-            });
-        }
-
-        function cancelCity(element) {
-            var tr = $(element).parents('tr:eq(0)');
-            tr.html();
-            tr.html('<td scope="row"></td>\n' +
-                '                                <td>' + name + '</td>\n' +
-                '                                <td style="float: right;">\n' +
-                '                                    <a href="javascript:void(0)" class="btn btn-primary" onclick="editCity(this)">\n' +
-                '                                        <i class="icon-pencil3"></i>\n' +
-                '                                    </a>\n' +
-                '                                    <a href="javascript:void(0)" class="btn btn-danger" onclick="deleteCity(this)">\n' +
-                '                                        <i class="icon-trash-o"></i>\n' +
-                '                                    </a>\n' +
-                '                                </td>');
-            orderTable();
-        }
-
-        function saveCity(element) {
-            var tr = $(element).parents('tr:eq(0)'),
-                tr_id = tr.attr('tr_id'),
-                name = tr.find('[name="name"]').val()
-            _token = "{{ csrf_token() }}";
-
-            $.post('{{ route('msk_cities.save') }}', {id: tr_id, name: name, _token: _token}, function (response) {
-                if (response.status == "ok") {
-                    tr.html();
-                    tr.html('<td scope="row"></td>\n' +
-                        '                                <td>' + name + '</td>\n' +
-                        '                                <td style="float: right;">\n' +
-                        '                                    <a href="javascript:void(0)" class="btn btn-primary" onclick="editCity(this)">\n' +
-                        '                                        <i class="icon-pencil3"></i>\n' +
-                        '                                    </a>\n' +
-                        '                                    <a href="javascript:void(0)" class="btn btn-danger" onclick="deleteCity(this)">\n' +
-                        '                                        <i class="icon-trash-o"></i>\n' +
-                        '                                    </a>\n' +
-                        '                                </td>');
-                    orderTable();
-                    tr.attr('tr_id',response.data.id);
-                }
-                else {
-                    tr.find('[name="name"]').css('border', '1px solid red');
-                    swal({
-                        'title': response.errors.name,
-                        'icon': 'error',
-                    });
-                    /*swal({
-                        title: "Silmək istədiyinizə əminsiniz?",
-                        text: "Bu məlumatı sildikdən sonra geri qaytarmaq mümkün olmayacaq!",
-                        icon: "warning",
-                        buttons: true,
-                        dangerMode: true,
-                    }).then((willDelete) => {
-                        if (willDelete) {
-                            swal("Məlumat uğurla silindi!", {
-                                icon: "success",
-                            });
-                        } else {
-                            swal("Məlumat silinmədi!");
-                        }
-                    });*/
-                }
-            });
-
-        }
-
-        function deleteCity(element) {
+        function deleteBook(element) {
             var tr = $(element).parents('tr:eq(0)'),
                 tr_id = tr.attr('tr_id'),
                 _token = "{{ csrf_token() }}";
@@ -190,7 +94,7 @@
                 dangerMode: true,
             }).then((willDelete) => {
                 if (willDelete) {
-                    $.post('{{ route('msk_cities.delete') }}', {id: tr_id,_token:_token}, function (response) {
+                    $.post('{{ route('book.delete') }}', {id: tr_id, _token: _token}, function (response) {
                         if (response.status == 'ok') {
                             swal("Məlumat uğurla silindi!", {
                                 icon: "success",
@@ -208,15 +112,11 @@
             });
         }
 
-        //        function deleteCity(element) {
-        //            var tr = $(element).parents('tr:eq(0)');
-        //            console.log(tr);
-        //        }
 
         orderTable();
 
         function orderTable() {
-            $(".city_table>tbody>tr").each(function (i) {
+            $(".book_table>tbody>tr").each(function (i) {
                 $(this).find("td:eq(0)").text(i + 1);
             });
         }

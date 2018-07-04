@@ -73,9 +73,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::post('/publisher/delete', 'Admin\PublisherController@delete')->name('publisher.delete');
 
     Route::get('/books', 'Admin\BookController@index')->name('book.admin');
-    Route::get('/book/{book}', 'Admin\BookController@addEditBook')->name('book.add_edit.modal');
-    Route::post('/book/{book}', 'Admin\BookController@addEditBookAction')->name('book.add_edit.action');
-
+    Route::get('/book/edit/{book}', 'Admin\BookController@addEditBook')->name('book.add_edit.modal');
+    Route::post('/book/edit/{book}', 'Admin\BookController@addEditBookAction')->name('book.add_edit.action');
+    Route::get('/book/info/{book}', 'Admin\BookController@infoBook')->name('book.info.modal');
+    Route::post('/book/delete', 'Admin\BookController@deleteBook')->name('book.delete');
 
 });
 
