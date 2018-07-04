@@ -37,6 +37,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/palette-gradient.css') }}">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
+    <link rel="stylesheet" href="{{ asset('css/select2.css') }}">
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/style.css') }}">
     <!-- END Custom CSS-->
 

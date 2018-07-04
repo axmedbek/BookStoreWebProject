@@ -7,6 +7,8 @@
         </div>
         <div class="content-body"><!-- stats -->
 @yield('content')
+
+            @include('admin.modals.modal_template')
         </div>
     </div>
 </div>

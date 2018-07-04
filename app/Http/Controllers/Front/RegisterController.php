@@ -50,7 +50,7 @@ class RegisterController extends Controller
             $user->zip_code = $request->get('zip_code');
             $user->address = $request->get('address');
             $user->city_id = /*$request->get('city')*/ 1;
-            $user->role_id = 1;
+            $user->role_id = 2;
             $user->activation_code = str_random(60);
             $user->password = bcrypt($request->get('password'));
             if ($request->hasFile('profile_img')){

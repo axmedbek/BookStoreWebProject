@@ -29,8 +29,8 @@ Version: 3.3.2 Timestamp: Mon Mar 25 12:14:18 PDT 2013
 
 .select2-container .select2-choice {
     display: block;
-    height: 26px;
-    padding: 0 0 0 8px;
+    height: 35px;
+    padding: 3px 0 3px 8px;
     overflow: hidden;
     position: relative;
 
@@ -496,8 +496,8 @@ disabled look for disabled choices in the results dropdown
 }
 
 .select2-container-multi .select2-choices .select2-search-choice {
-    padding: 3px 5px 3px 18px;
-    margin: 3px 0 3px 5px;
+    padding: 5px 5px 10px 18px;
+    margin: 6px 0 3px 5px;
     position: relative;
 
     line-height: 13px;

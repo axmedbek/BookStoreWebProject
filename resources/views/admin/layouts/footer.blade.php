@@ -28,6 +28,9 @@
 <script src="{{ asset('js/admin/dashboard-lite.js') }}" type="text/javascript"></script>
 <!-- END PAGE LEVEL JS-->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/select2.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/select2_locale_tr.js') }}"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
 
 @yield('js')
 

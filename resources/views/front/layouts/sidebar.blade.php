@@ -11,24 +11,14 @@
                         {{ $category->name }}
                         <i class="{{ $category->icon }}" style="float: right;"></i>
                         <ul class="category-list" style="display: none;">
-                            <li>
-                                <a href="#">
-                                    Test
-                                    <i class="" style="float: right;"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Test
-                                    <i class="" style="float: right;"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Test
-                                    <i class="" style="float: right;"></i>
-                                </a>
-                            </li>
+                            @foreach($category->sub_categories as $subcategory)
+                                <li>
+                                    <a href="{{ route('category.page',str_slug($subcategory->name)) }}">
+                                        {{ $subcategory->name }}
+                                        <i class="{{ $subcategory->icon }}" style="float: right;"></i>
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     </a>
                 </li>
@@ -41,9 +31,9 @@
             Nəşrİyyatlar
         </h3>
         <ul class="category-list">
-            <li><a href="#">Qanun</a></li>
-            <li><a href="#">Teas Press</a></li>
-            <li><a href="#">Parlaq imzalar</a></li>
+            @foreach(\App\Publisher::all() as $publisher)
+                <li><a href="{{ route('publisher.page',str_slug($publisher->name)) }}">{{ $publisher->name }}</a></li>
+            @endforeach
         </ul>
     </div><!-- End .widget -->
 
@@ -458,7 +448,7 @@
 @section('js')
     <script>
         $("#category_ul>li").each(function () {
-            $(this).on('click',function(){
+            $(this).on('click', function () {
                 $(this).find('ul').slideToggle("slow");
             });
         });

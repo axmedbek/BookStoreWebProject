@@ -1,17 +1,21 @@
-
-
-function customSelect2(element,url,what){
+function customSelect2(element, url, what , params , placeholder,multiple) {
+    if (!params) params = {};
     element.select2({
         allowClear: true,
+        multiple : multiple,
+        placeholder : placeholder,
         ajax: {
             url: url,
-            type: 'POST',
+            type: 'GET',
             dataType: 'json',
             data: function (word) {
-                return {
+                customObj = {
                     'q': word,
-                    'what': what,
+                    'what': what
                 };
+                comingObj = params;
+                sendingObj = Object.assign(customObj,comingObj);
+                return sendingObj;
             },
             results: function (data, q) {
                 return data
@@ -20,3 +24,17 @@ function customSelect2(element,url,what){
         }
     });
 }
+
+function openModal(route, data, type) {
+
+    type = typeof type !== 'undefined' ? type : 'stick-up';
+    $('#myModal').attr("class", "modal fade disable-scroll " + type);
+
+    $.get(route, data, function (response) {
+        $('#myModal').html(response);
+        $('#myModal').modal('show');
+    });
+
+
+}
+

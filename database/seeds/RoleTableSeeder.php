@@ -13,12 +13,15 @@ class RoleTableSeeder extends Seeder
     {
         //
         \App\Model\Role::truncate();
+
         $role = new \App\Model\Role();
         $role->name = "admin";
         $role->save();
+
         $role = new \App\Model\Role();
         $role->name = "user";
         $role->save();
+
         $role = new \App\Model\Role();
         $role->name = "moderator";
         $role->save();

@@ -182,27 +182,7 @@
             }
         }
 
-        //customSelect2($("input[name='city']"),"{{ route('select_route') }}","get_cities");
-
-
-        $("input[name='city']").select2({
-            allowClear: true,
-            ajax: {
-                url: "{{ route('select_route') }}" ,
-                type: 'GET',
-                dataType: 'json',
-                data: function (word) {
-                    return {
-                        'q': word,
-                        'what': "get_cities",
-                    };
-                },
-                results: function (data) {
-                    return data
-                },
-                cache: true
-            }
-        });
+        customSelect2($("input[name='city']"),"{{ route('select_route') }}","get_cities");
 
 
     </script>
