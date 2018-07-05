@@ -33,7 +33,7 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/register', 'Front\RegisterController@registerProcess')->name('register_process');
 });
 
-Route::get('/product/{productName}', 'Front\ProductController@index')->name('product_page');
+Route::get('/book/{bookName}', 'Front\BookController@getBookByName')->name('product_page');
 Route::get('/select2/select_requests', 'SelectController@index')->name('select_route');
 Route::get('/category/{categoryName}', 'Admin\CategoryController@findCategoryByName')->name('category.page');
 Route::get('/publisher/{publisher_name}', 'Admin\PublisherController@delete')->name('publisher.page');

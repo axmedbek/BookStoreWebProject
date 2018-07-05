@@ -17,7 +17,8 @@ class BookStatusController extends Controller
     public function save(Request $request){
         $validator = Validator::make($request->all(),[
             'id' => 'required|integer',
-            'name' => 'required|string|max:30|unique:book_statuses,name,'.$request->get('id').',id'
+            'color' => 'required|string',
+            'name' => 'required|string|max:30|unique:book_statuses,name,'.$request->get('id').',id,deleted_at,NULL'
         ]);
 
         if ($validator->fails()){
@@ -32,6 +33,7 @@ class BookStatusController extends Controller
                 $bookStatusObj = BookStatus::find($request->get('id'));
             }
             $bookStatusObj->name = $request->get('name');
+            $bookStatusObj->color = $request->get('color');
             $bookStatusObj->save();
 
             return response()->json(['status'=>'ok','data' => $bookStatusObj->toArray()]);

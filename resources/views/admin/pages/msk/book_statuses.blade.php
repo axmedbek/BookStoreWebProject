@@ -7,7 +7,8 @@
                 <div class="card-header">
                     <h4 class="card-title">Kitab statusları</h4>
 
-                    <a href="javascript:void(0)" class="btn btn-info" onclick="addBookStatus(this)" style="float: right;">Yeni</a>
+                    <a href="javascript:void(0)" class="btn btn-info" onclick="addBookStatus(this)"
+                       style="float: right;">Yeni</a>
                 </div>
                 <div class="card-body collapse in">
                     <div class="table-responsive">
@@ -16,6 +17,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Adı</th>
+                                <th>Rəngi</th>
                                 <th style="float: right">Əməliyyat</th>
                             </tr>
                             </thead>
@@ -24,11 +26,14 @@
                                 <tr tr_id="{{ $bookStatus->id }}">
                                     <td scope="row"></td>
                                     <td>{{ $bookStatus->name }}</td>
-                                    <td style="float: right;">
-                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="editBookStatus(this)">
+                                    <td><span style="border: 1px solid {{ $bookStatus->color }};color: white;background-color: {{ $bookStatus->color }};">{{ $bookStatus->color }}</span></td>
+                                    <td style="float: right">
+                                        <a href="javascript:void(0)" class="btn btn-primary"
+                                           onclick="editBookStatus(this)">
                                             <i class="icon-pencil3"></i>
                                         </a>
-                                        <a href="javascript:void(0)" class="btn btn-danger" onclick="deleteBookStatus(this)">
+                                        <a href="javascript:void(0)" class="btn btn-danger"
+                                           onclick="deleteBookStatus(this)">
                                             <i class="icon-trash-o"></i>
                                         </a>
                                     </td>
@@ -58,6 +63,9 @@
                 '<td>' +
                 '<input type="text" name="name" class="form-control">' +
                 '</td>' +
+                '<td>' +
+                '<input type="color" name="color" class="form-control">' +
+                '</td>' +
                 '<td style="float: right;">' +
                 '<a href="javascript:void(0)" class="btn btn-success" onclick="saveBookStatus(this)">\n' +
                 '                                        <i class="icon-save"></i>\n' +
@@ -78,12 +86,16 @@
         function editBookStatus(element) {
             var tr = $(element).parents('tr:eq(0)'),
                 tr_id = tr.attr('tr_id'),
-                name = tr.find('td:eq(1)').text();
+                name = tr.find('td:eq(1)').text(),
+                color = tr.find('td:eq(2)').text();
             tr.html();
             tr.html(
                 '<td></td>' +
                 '<td>' +
                 '<input type="text" name="name" class="form-control" value="' + name + '">' +
+                '</td>' +
+                '<td>' +
+                '<input type="color" name="color" class="form-control" value="' + _.trim(color) + '">' +
                 '</td>' +
                 '<td style="float: right;">' +
                 '<a href="javascript:void(0)" class="btn btn-success" onclick="saveBookStatus(this)">' +
@@ -97,7 +109,10 @@
             $('.cancelBookStatus').on('click', function () {
                 tr.html();
                 tr.html('<td scope="row"></td>\n' +
-                    '                                <td>' + name + '</td>\n' +
+                    '                                <td>' + name + '</td>' +
+                    '                               <td>' +
+                    '                                  <span style="border: 1px solid '+color+';color: white;background-color: '+color+';">'+color+'</span>' +
+                    '                               </td>'+
                     '                                <td style="float: right;">\n' +
                     '                                    <a href="javascript:void(0)" class="btn btn-primary" onclick="editBookStatus(this)">\n' +
                     '                                        <i class="icon-pencil3"></i>\n' +
@@ -113,14 +128,23 @@
         function saveBookStatus(element) {
             var tr = $(element).parents('tr:eq(0)'),
                 tr_id = tr.attr('tr_id'),
-                name = tr.find('[name="name"]').val()
-            _token = "{{ csrf_token() }}";
+                name = tr.find('[name="name"]').val(),
+                color = tr.find('[name="color"]').val(),
+                _token = "{{ csrf_token() }}";
 
-            $.post('{{ route('msk_book_statuses.save') }}', {id: tr_id, name: name, _token: _token}, function (response) {
+            $.post('{{ route('msk_book_statuses.save') }}', {
+                id: tr_id,
+                name: name,
+                color: color,
+                _token: _token
+            }, function (response) {
                 if (response.status == "ok") {
                     tr.html();
                     tr.html('<td scope="row"></td>\n' +
                         '                                <td>' + name + '</td>\n' +
+                        '                               <td>' +
+                        '                                  <span style="border: 1px solid '+color+';color: white;background-color: '+color+';">'+color+'</span>' +
+                        '                               </td>'+
                         '                                <td style="float: right;">\n' +
                         '                                    <a href="javascript:void(0)" class="btn btn-primary" onclick="editBookStatus(this)">\n' +
                         '                                        <i class="icon-pencil3"></i>\n' +
@@ -130,7 +154,7 @@
                         '                                    </a>\n' +
                         '                                </td>');
                     orderTable();
-                    tr.attr('tr_id',response.data.id);
+                    tr.attr('tr_id', response.data.id);
                 }
                 else {
                     tr.find('[name="name"]').css('border', '1px solid red');
@@ -157,7 +181,7 @@
                 dangerMode: true,
             }).then((willDelete) => {
                 if (willDelete) {
-                    $.post('{{ route('msk_book_statuses.delete') }}', {id: tr_id,_token:_token}, function (response) {
+                    $.post('{{ route('msk_book_statuses.delete') }}', {id: tr_id, _token: _token}, function (response) {
                         if (response.status == 'ok') {
                             swal("Məlumat uğurla silindi!", {
                                 icon: "success",

@@ -40,10 +40,7 @@
                                     </td>
                                     <td>{{ sprintf("%.2f",$book->cost) }} Azn</td>
                                     <td>
-                                        <div class="tag tag-pill tag-{{
-                                    $book->book_status_id == 1 ? 'danger' :
-                                    $book->book_status_id == 2 ? 'success' :
-                                    'info' }}">{{{ $book->book_status->name }}}</div>
+                                        <div class="tag tag-default" style="background-color: {{ $book->book_status['color'] }};width: 80px;">{{ $book->book_status['name'] }}</div>
                                     </td>
                                     <td style="float: right;">
                                         <a type="button"

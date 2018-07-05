@@ -128,7 +128,7 @@ $ninth-color: #0ba3ec;
 
 @media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 0.75), (min-resolution: 72dpi) {
   .icon {
-    background-image: url("../images/sprite@2x.png");
+    background-image: url("../../images/front/images/sprite@2x.png");
     background-size: 140px 9680px;
   }
 }
@@ -811,7 +811,7 @@ p {
   display: inline-block;
   width: 12px;
   height: 9px;
-  background-image: url("../images/breadcrumb-arrow.png");
+  background-image: url("../../images/front/images/breadcrumb-arrow.png");
   margin: 0 15px 0 10px;
   vertical-align: middle;
 }
@@ -2695,7 +2695,7 @@ select.custom-select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url("../images/select-icon.png");
+  background-image: url("../../images/front/images/select-icon.png");
   background-position: calc(100% - 27px) center;
   background-repeat: no-repeat;
 }
@@ -15779,7 +15779,7 @@ figure + .ins-meta {
 .ratings-container {
   position: relative;
   width: 90px;
-  background-image: url("../images/ratings-bg.png");
+  background-image: url("../../images/front/images/ratings-bg.png");
 }
 
 .ratings-container,
@@ -15794,7 +15794,7 @@ figure + .ins-meta {
   left: 0;
   bottom: 0;
   overflow: hidden;
-  background-image: url("../images/ratings.png");
+  background-image: url("../../images/front/images/ratings.png");
   text-indent: -9999px;
 }
 
@@ -15804,12 +15804,13 @@ figure + .ins-meta {
 
 .product-brand {
   font: 500 14px/1 "Segeo-UI", Arial, sans-serif;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 0.04em;
 }
 
 .product-brand a {
-  color: #959595;
+  color: #272727;
+    font-weight: bold;
 }
 
 .product-brand a:hover, .product-brand a:focus {
@@ -15821,7 +15822,7 @@ figure + .ins-meta {
 }
 
 .product-title {
-  font: 400 17px/1.175 "Segeo-UI", sans-serif;
+  font: 400 14px/1.175 "Segeo-UI", sans-serif;
   letter-spacing: 0.01em;
   margin-bottom: 12px;
 }
@@ -16132,16 +16133,16 @@ figure + .ins-meta {
   display: inline-block;
   position: absolute;
   z-index: 99;
-  right: 16px;
-  top: 16px;
-  font: 600 15px/1 "Segeo-UI", sans-serif;
+  right: 5px;
+  top: 5px;
+  font: 600 13px/1 "Segeo-UI", sans-serif;
   color: #fff;
   border-radius: 6px 6px 6px 0;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   background-color: #00aeff;
   text-align: center;
-  min-width: 70px;
+  min-width: 50px;
   padding: 11.5px 10px 7.5px;
 }
 
@@ -18246,7 +18247,7 @@ figure + .ins-meta {
 
 @media (min-width: 1200px) {
   .max-col-4 .product-column {
-    width: 25%;
+    width: 14%;
   }
   .max-col-4 .product-column.wide {
     width: 50%;

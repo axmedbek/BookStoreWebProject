@@ -14,9 +14,10 @@
                     <div class="col-md-4">
                         <div class="image-upload" style="margin-left: 23%;margin-top: 8%;">
                             <label for="file-input">
-                                <img src="{{ asset('images\admin\book-placeholder.jpg') }}"
+                                <img src="{{ !empty($bookObj['book_img'] ) ? asset('images/front/images/book_images/'.$bookObj['book_img']) : asset('images\admin\book-placeholder.jpg') }}"
                                      style="width: 165px;height: 220px;">
                             </label>
+                            <span style="font-size: 12px;color: tomato;"><span>*</span>Seçmək üçün üzərinə klikləyin</span>
                             <input id="file-input" type="file" accept="image/*" name="book_img"
                                    onchange="readURL(this)" style="visibility: hidden;"/>
                         </div>
@@ -95,7 +96,8 @@
                         <div class="form-group">
                             <label>Dərc olunma tarixi</label>
                             <input name="publishing_date" class="form-control border-primary" type="text"
-                                   placeholder="Dərc olunma tarixini daxil edin" value="{{ isset($bookObj['publishing_date']) ? date('d-m-Y',strtotime($bookObj['publishing_date'])) : '' }}">
+                                   placeholder="Dərc olunma tarixini daxil edin"
+                                   value="{{ isset($bookObj['publishing_date']) ? date('d-m-Y',strtotime($bookObj['publishing_date'])) : '' }}">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -109,7 +111,8 @@
                         <div class="form-group">
                             <label>Dərc sayı</label>
                             <input name="publishing_count" class="form-control border-primary" type="number"
-                                   placeholder="Dərc sayını daxil edin" min="1" value="{{ $bookObj['publishing_count'] }}">
+                                   placeholder="Dərc sayını daxil edin" min="1"
+                                   value="{{ $bookObj['publishing_count'] }}">
                         </div>
                     </div>
                 </div>
@@ -118,7 +121,9 @@
                         <label for="book_description">Haqqında</label>
                         <textarea id="book_description" rows="5" class="form-control border-primary"
                                   name="book_description"
-                                  placeholder="Kitab haqqında qısa məlumat yazın"></textarea>
+                                  placeholder="Kitab haqqında qısa məlumat yazın">
+                            {!! $bookObj['book_description'] !!}
+                        </textarea>
                     </div>
                 </div>
                 <div class="row">
@@ -135,12 +140,11 @@
 <script src="{{ asset('js/tinymce.min.js') }}"></script>
 <script>
 
-
     $("#book_add_edit_form").submit(function () {
         let formData = new FormData(this),
             book_description_text = tinyMCE.editors[$('#book_description').attr('id')].getContent();
         formData.append('_token', "{{ csrf_token() }}");
-        formData.append('book_description_text',book_description_text);
+        formData.append('book_description_text', book_description_text);
 
 
         $.ajax({
@@ -169,11 +173,12 @@
         menubar: false,
         statusbar: false,
         plugins: [
+            'textcolor',
             'advlist autolink lists link image charmap print preview anchor textcolor',
             'searchreplace visualblocks code fullscreen',
             'insertdatetime media table contextmenu paste code help wordcount'
         ],
-        toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+        toolbar: 'insert | undo redo |  formatselect | bold italic forecolor backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
         content_css: [
             '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
             '//www.tinymce.com/css/codepen.min.css']
@@ -194,19 +199,42 @@
         }
     }
 
-    customSelect2($('input[name="writerName"]'), '{{ route('select_route') }}', 'get_writers', null, 'Yazıçı seçin',true);
-    customSelect2($('input[name="publisher"]'), '{{ route('select_route') }}', 'get_publisher', null, 'Nəşriyyat seçin',false);
-    customSelect2($('input[name="category"]'), '{{ route('select_route') }}', 'get_categories', null, 'Kateqoriya seçin',false);
-    customSelect2($('input[name="book_lang"]'), '{{ route('select_route') }}', 'get_book_langs', null, 'Kitab dilini seçin',false);
-    customSelect2($('input[name="book_status"]'), '{{ route('select_route') }}', 'get_book_statuses', null, 'Kitab statusu seçin',false);
-    customSelect2($('input[name="sub_category"]'), '{{ route('select_route') }}', 'get_sub_categories', null, 'Alt kateqoriya seçin',false);
+    customSelect2($('input[name="writerName"]'), '{{ route('select_route') }}', 'get_writers', null, 'Yazıçı seçin', true);
+    if (!_.isEmpty({!! $writerData !!})) {
+        $('input[name="writerName"]').select2('data',{!! $writerData !!});
+    }
+    customSelect2($('input[name="publisher"]'), '{{ route('select_route') }}', 'get_publisher', null, 'Nəşriyyat seçin', false);
+    if (!_.isEmpty({!! $publisherData !!})) {
+        $('input[name="publisher"]').select2('data',{!! $publisherData !!});
+    }
+
+    customSelect2($('input[name="book_lang"]'), '{{ route('select_route') }}', 'get_book_langs', null, 'Kitab dilini seçin', false);
+    if (!_.isEmpty({!! $bookLangData !!})) {
+        $('input[name="book_lang"]').select2('data',{!! $bookLangData !!});
+    }
+    customSelect2($('input[name="book_status"]'), '{{ route('select_route') }}', 'get_book_statuses', null, 'Kitab statusu seçin', false);
+    if (!_.isEmpty({!! $bookStatusData !!})) {
+        $('input[name="book_status"]').select2('data',{!! $bookStatusData !!});
+    }
+    customSelect2($('input[name="sub_category"]'), '{{ route('select_route') }}', 'get_sub_categories', null, 'Alt kateqoriya seçin', false);
     $('input[name="sub_category"]').select2('disable');
 
-    $('input[name="category"]').on('change', function () {
+    if (!_.isEmpty({!! $subCategoryData !!})) {
+        $('input[name="sub_category"]').select2('data',{!! $subCategoryData !!});
+        $('input[name="sub_category"]').select2('enable');
+    }
+    customSelect2($('input[name="category"]'), '{{ route('select_route') }}', 'get_categories', null, 'Kateqoriya seçin', false);
+
+    $('input[name="category"]').change(function () {
         customSelect2($('input[name="sub_category"]'), '{{ route('select_route') }}', 'get_sub_categories', {
             'category_id': $(this).val()
-        }, 'Alt kateqoriya seçin');
+        }, 'Alt kateqoriya seçin', false);
         $('input[name="sub_category"]').select2('enable');
     });
+
+    if (!_.isEmpty({!! $categoryData !!})) {
+        $('input[name="category"]').select2('data',{!! $categoryData !!});
+        $('input[name="category"]').trigger('change');
+    }
 
 </script>

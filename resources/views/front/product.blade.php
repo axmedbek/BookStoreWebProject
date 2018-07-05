@@ -23,7 +23,7 @@
                                     <div class="product-zoom-wrapper">
                                         <span class="product-label discount">-25%</span>
                                         <div class="product-zoom-container">
-                                            <img id="product-zoom" src="assets/images/products/single/product1.jpg" data-zoom-image="assets/images/products/single/big/product1.jpg" alt="Product image big">
+                                            <img id="product-zoom" src="{{ asset('images/front/images/book_images/'.$book->book_img) }}" data-zoom-image="{{ asset('images/front/images/products/single/product1.jpg') }}" alt="Product image big">
                                         </div><!-- End .product-zoom-container -->
                                         <i class="btn-quickview zoom-icon icon"></i>
                                     </div><!-- End .product-zoom-wrapper -->
@@ -36,37 +36,37 @@
 
                                         <div class="swiper-wrapper">
 
-                                            <div class="swiper-slide">
-                                                <a href="#" data-image="assets/images/products/single/product1.jpg" data-zoom-image="assets/images/products/single/big/product1.jpg" class="product-gallery-item">
-                                                    <img src="assets/images/products/single/thumbs/product1.jpg" alt="product-small-1">
+                                            <div class="swiper-slide swiper-slide-active" style="width: 127px; margin-right: 22px;">
+                                                <a href="#" data-image="{{ asset('images/front/images/products/single/product1.jpg') }}" data-zoom-image="{{ asset('images/front/images/products/single/big/product1.jpg') }}" class="product-gallery-item">
+                                                    <img src="{{ asset('images/front/images/products/single/thumbs/product1.jpg') }}" alt="product-small-1">
                                                 </a>
                                             </div><!-- End .swiper-slide -->
 
-                                            <div class="swiper-slide">
-                                                <a href="#" data-image="assets/images/products/single/product2.jpg" data-zoom-image="assets/images/products/single/big/product2.jpg" class="product-gallery-item">
+                                            <div class="swiper-slide swiper-slide-next" style="width: 127px; margin-right: 22px;">
+                                                <a href="#" data-image="{{ asset('images/front/images/products/single/product2.jpg') }}" data-zoom-image="{{  }}" class="product-gallery-item">
                                                     <img src="assets/images/products/single/thumbs/product2.jpg" alt="product-small-1">
                                                 </a>
                                             </div><!-- End .swiper-slide -->
 
-                                            <div class="swiper-slide">
+                                            <div class="swiper-slide" style="width: 127px; margin-right: 22px;">
                                                 <a href="#" data-image="assets/images/products/single/product3.jpg" data-zoom-image="assets/images/products/single/big/product3.jpg" class="product-gallery-item">
                                                     <img src="assets/images/products/single/thumbs/product3.jpg" alt="product-small-1">
                                                 </a>
                                             </div><!-- End .swiper-slide -->
 
-                                            <div class="swiper-slide">
+                                            <div class="swiper-slide" style="width: 127px; margin-right: 22px;">
                                                 <a href="#" data-image="assets/images/products/single/product4.jpg" data-zoom-image="assets/images/products/single/big/product4.jpg" class="product-gallery-item">
                                                     <img src="assets/images/products/single/thumbs/product4.jpg" alt="product-small-1">
                                                 </a>
                                             </div><!-- End .swiper-slide -->
 
-                                            <div class="swiper-slide">
+                                            <div class="swiper-slide" style="width: 127px; margin-right: 22px;">
                                                 <a href="#" data-image="assets/images/products/single/product5.jpg" data-zoom-image="assets/images/products/single/big/product5.jpg" class="product-gallery-item">
                                                     <img src="assets/images/products/single/thumbs/product5.jpg" alt="product-small-1">
                                                 </a>
                                             </div><!-- End .swiper-slide -->
 
-                                        </div><!-- End .swiper-wrapper -->
+                                        </div>
                                     </div><!-- End .swiper-container -->
 
                                     <div class="social-icons colored animated">
@@ -84,11 +84,11 @@
                             <div class="col-sm-5">
                                 <div class="product-details">
                                     <div class="product-brand">
-                                        <a href="#">Samsung</a>
+                                        <a href="#"></a>
                                     </div><!-- End .product-brand -->
 
                                     <h2 class="product-title">
-                                        Bass Effect Audio XV Portable Wireless NFC Speaker
+                                       {{ $book->name }}
                                     </h2>
 
                                     <div class="product-ratings-wrapper">
@@ -1567,7 +1567,7 @@
         </div><!-- End .footer-top -->
 
 @endsection
-@section('title','')
+@section('title',$book->name)
 @section('description','')
 @section('keywords','')
 @section('css')

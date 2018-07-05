@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Book;
 use App\Category;
 use App\SubCategory;
 use Illuminate\Http\Request;
@@ -34,6 +35,7 @@ class CategoryController extends Controller
             }
 
             $categoryObj->name = $request->get('name');
+            $categoryObj->slug = str_slug($request->get('name'));
             $categoryObj->icon = $request->get('icon');
             $categoryObj->sira = $request->get('sira');
             $categoryObj->save();
@@ -61,6 +63,7 @@ class CategoryController extends Controller
             }
 
             $subCategoryObj->name = $request->get('name');
+            $subCategoryObj->slug = str_slug($request->get('name'));
             $subCategoryObj->icon = $request->get('icon');
             $subCategoryObj->category_id = $request->get('category_id');
             $subCategoryObj->sira = $request->get('sira');
@@ -81,5 +84,29 @@ class CategoryController extends Controller
             $subCategories = SubCategory::where('category_id',$request->get('cat_id'))->get();
             return response()->json(['status' => 'ok' , 'data' => $subCategories]);
         }
+    }
+
+    public function findCategoryByName($categoryName){
+
+        $mainCategoryName = "";
+        $category = Category::where('slug',$categoryName)->first();
+        $subcategory = SubCategory::where('slug',$categoryName)->first();
+
+        if ($category){
+            $mainCategoryName = $category->name;
+        }
+        else{
+            $mainCategoryName = $subcategory->name;
+        }
+        $books = Book::where('category_id',$category['id'])
+            ->orWhere('sub_category_id',$subcategory['id'])
+            ->get();
+
+        $data = [
+          'books' => $books,
+          'categoryName' => $mainCategoryName
+        ];
+
+        return view('front.category_page',$data);
     }
 }

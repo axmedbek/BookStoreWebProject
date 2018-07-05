@@ -7,13 +7,13 @@
         <ul class="category-list" id="category_ul">
             @foreach(\App\Category::all() as $category)
                 <li>
-                    <a href="{{ route('category.page',str_slug($category->name)) }}">
+                    <a href="{{ route('category.page',$category->slug) }}">
                         {{ $category->name }}
                         <i class="{{ $category->icon }}" style="float: right;"></i>
                         <ul class="category-list" style="display: none;">
                             @foreach($category->sub_categories as $subcategory)
                                 <li>
-                                    <a href="{{ route('category.page',str_slug($subcategory->name)) }}">
+                                    <a href="{{ route('category.page',$subcategory->slug) }}">
                                         {{ $subcategory->name }}
                                         <i class="{{ $subcategory->icon }}" style="float: right;"></i>
                                     </a>

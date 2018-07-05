@@ -17,6 +17,7 @@ class CreateBooksTable extends Migration
             $table->increments('id');
             $table->string('name',120);
             $table->string('book_img');
+            $table->string('slug');
             $table->text('book_description');
             $table->unsignedInteger('publisher_id');
             $table->unsignedInteger('category_id');

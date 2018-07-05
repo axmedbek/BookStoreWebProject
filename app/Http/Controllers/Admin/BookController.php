@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Book;
+use App\Publisher;
 use App\Writer;
 use Carbon\Carbon;
+use function GuzzleHttp\Psr7\str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -21,9 +23,33 @@ class BookController extends Controller
     public function addEditBook($book)
     {
         $bookObj = Book::find($book);
+        $writerData = [];
+        $publisherData = [];
+        $categoryData = [];
+        $subCategoryData = [];
+        $bookStatusData = [];
+        $bookLangData = [];
+
+        if ($book != 0){
+            foreach ($bookObj->book_writers as $writer){
+                $writerData[] = ['id' => $writer->id , 'text' => $writer->name];
+            }
+
+            $publisherData = ['id' => $bookObj->publisher_id , 'text' => $bookObj->publisher->name];
+            $categoryData = ['id' => $bookObj->category_id , 'text' => $bookObj->category->name];
+            $subCategoryData = ['id' => $bookObj->sub_category_id , 'text' => $bookObj->sub_category->name];
+            $bookStatusData = ['id' => $bookObj->book_status_id , 'text' => $bookObj->book_status->name];
+            $bookLangData = ['id' => $bookObj->book_lang_id , 'text' => $bookObj->book_lang->name];
+        }
         $data = [
             'book' => $book,
-            'bookObj' => $bookObj
+            'bookObj' => $bookObj,
+            'writerData' => json_encode($writerData),
+            'publisherData' => json_encode($publisherData),
+            'categoryData' => json_encode($categoryData),
+            'subCategoryData' => json_encode($subCategoryData),
+            'bookStatusData' => json_encode($bookStatusData),
+            'bookLangData' => json_encode($bookLangData)
         ];
         return view('admin.modals.books.books_add_edit', $data);
     }
@@ -48,7 +74,25 @@ class BookController extends Controller
                 $bookObj = Book::find($book);
             }
 
+            $writerNames = "";
+            if ($request->has('writerName')){
+                $writers= explode(",",$request->get('writerName'));
+                foreach($writers as $key => $writer){
+                    $writerObj = Writer::find($writer);
+                    $writerNames .= $writerObj->name;
+                    if (count($writers) > $key+1){
+                        $writerNames.=" ";
+                    }
+                }
+            }
+            $publisherName = "";
+            if ($request->has('publisher')){
+                $publisherObj = Publisher::find($request->get('publisher'));
+                $publisherName = $publisherObj['name'];
+            }
+
             $bookObj->name = $request->get('bookName');
+            $bookObj->slug = str_slug($request->get('bookName')." ".$writerNames." ".$publisherName);
             $bookObj->book_description = $request->get('book_description_text');
             $bookObj->publisher_id = $request->get('publisher');
             $bookObj->category_id = $request->get('category');

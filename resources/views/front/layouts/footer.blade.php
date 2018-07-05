@@ -114,7 +114,7 @@
                 <img src="{{ asset('images/front/images/cards.png') }}" alt="Payment methods">
             </div><!-- End .payment-info -->
 
-            <a class="scroll-top icon" href="#top" title="Scroll top"><span class="sr-only">Scroll Top</span></a>
+            <a class="scroll-top icon" href="#top" title="Scroll top"><span class="sr-only"><i class="icon-camera"></i></span></a>
         </div><!-- End .container -->
     </div><!-- End .footer-bottom -->
 </footer><!-- End .footer -->

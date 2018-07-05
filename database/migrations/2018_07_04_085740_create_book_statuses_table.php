@@ -16,6 +16,7 @@ class CreateBookStatusesTable extends Migration
         Schema::create('book_statuses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('color');
             $table->softDeletes();
             $table->timestamps();
         });
