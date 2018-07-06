@@ -78,5 +78,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/book/info/{book}', 'Admin\BookController@infoBook')->name('book.info.modal');
     Route::post('/book/delete', 'Admin\BookController@deleteBook')->name('book.delete');
 
+    Route::get('/users', 'Admin\UsersController@index')->name('users.admin');
+
+
 });
 

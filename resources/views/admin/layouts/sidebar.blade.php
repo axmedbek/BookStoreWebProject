@@ -12,8 +12,11 @@
                                                                                        class="menu-title">Dashboard</span><span
                             class="tag tag tag-primary tag-pill float-xs-right mr-2">2</span></a>
             </li>
-            <li class="nav-item"><a href="{{ route('book.admin') }}"><i class="icon-ios-bookmarks-outline"></i><span data-i18n="nav.menu_levels.main"
+            <li class="nav-item"><a href="{{ route('book.admin') }}"><i class="icon-book2"></i><span data-i18n="nav.menu_levels.main"
                                                                                                            class="menu-title">Kitablar</span></a>
+            </li>
+            <li class="nav-item"><a href="{{ route('users.admin') }}"><i class="icon-users3"></i><span data-i18n="nav.menu_levels.main"
+                                                                                                           class="menu-title">İstifadəçilər</span></a>
             </li>
             <li class="nav-item"><a href="{{ route('category.admin') }}"><i class="icon-folder3"></i><span data-i18n="nav.menu_levels.main"
                                                                             class="menu-title">Kateqoriyalar</span></a>

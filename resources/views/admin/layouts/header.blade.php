@@ -29,7 +29,7 @@
     <!-- BEGIN ROBUST CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/bootstrap-extended.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/app.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/color.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/colors.css') }}">
     <!-- END ROBUST CSS-->
     <!-- BEGIN Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/vertical-menu.css') }}">
