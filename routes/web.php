@@ -42,7 +42,7 @@ Route::get('/publisher/{publisher_name}', 'Admin\PublisherController@delete')->n
 //admin routes
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
-    Route::get('/', 'Admin\DashboardController@index')->name('admin_page');
+    Route::get('/{locale}', 'Admin\DashboardController@index')->name('admin_page');
 
     Route::get('/msk/cities', 'Admin\Msk\CityController@index')->name('msk_cities');
     Route::post('/msk/cities/save', 'Admin\Msk\CityController@save')->name('msk_cities.save');

@@ -9,7 +9,7 @@
     <div class="main-menu-content">
         <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
             <li class=" nav-item"><a href="{{ route('admin_page') }}"><i class="icon-home3"></i><span data-i18n="nav.dash.main"
-                                                                                       class="menu-title">Dashboard</span><span
+                                                                                       class="menu-title">{{ trans('messages.dashboard') }}</span><span
                             class="tag tag tag-primary tag-pill float-xs-right mr-2">2</span></a>
             </li>
             <li class="nav-item"><a href="{{ route('book.admin') }}"><i class="icon-book2"></i><span data-i18n="nav.menu_levels.main"
