@@ -17,20 +17,41 @@
                 <div class="col-md-9">
                     <div class="row row-lg">
                         <div class="col-sm-6" style="margin-left: 25%;">
+                            @if(count($errors->all()) > 0)
+                                <div class="alert alert-danger">
+                                    @foreach($errors->all() as $error)
+                                        {{ $error }} <br>
+                                    @endforeach
+                                </div>
+                            @endif
                             <h2 class="text-center">Xoş gəldin KİTABQURDU !</h2>
                             <div class="registered-customer-section">
                                 <p>Hesabınıza daxil olaraq daha çox fürsətdən yararlana bilərsiniz.</p>
-                                <form action="{{ route('login_process') }}" method="post">
+                                <form id="login_form" action="{{ route('login_process') }}" method="post">
                                     {{ csrf_field() }}
                                     <div class="form-group label-overlay">
-                                        <input type="text" class="form-control" name="email" required>
-                                        <label class="input-desc"><i class="icon input-icon input-email"></i>Enter your
-                                            email <span class="input-required">*</span></label>
+                                        <input type="text"
+                                               class="form-control {{ $errors->has("email") ? 'error-message' : '' }}"
+                                               name="email" autocomplete="off">
+                                        <label class="input-desc"><i class="icon input-icon input-email"></i>Emailinizi
+                                            daxil edin <span class="input-required">*</span></label>
+                                        @if($errors->has('email'))<span
+                                                style="color: tomato;">{{ $errors->first('email') }}</span>@endif
+                                        <span style="color: tomato;"></span>
+
                                     </div><!-- End .form-group -->
                                     <div class="form-group label-overlay">
-                                        <input type="password" class="form-control" name="password" required>
-                                        <label class="input-desc"><i class="icon input-icon input-password"></i>Enter
-                                            your password <span class="input-required">*</span></label>
+                                        <input type="password"
+                                               class="form-control {{ $errors->has("password") ? 'error-message' : '' }}"
+                                               name="password" autocomplete="off">
+                                        <label class="input-desc"><i class="icon input-icon input-password"></i>Şifrənizi
+                                            daxil edin
+                                            <span class="input-required">*</span></label>
+                                        @if($errors->has('password'))<span
+                                                style="color: tomato;">{{ $errors->first('password') }}</span>@endif
+                                        <span style="color: tomato;"></span>
+
+
                                     </div><!-- End .form-group -->
 
                                     <div class="mb20"></div><!-- margin -->
@@ -171,3 +192,72 @@
 
 @endsection
 @section('title','Login səhifəsi')
+@section('js')
+    <script>
+        $('#login_form').on('submit', function (e) {
+            e.preventDefault();
+            let email = $(this).find('[name="email"]'),
+                password = $(this).find('[name="password"]'),
+                errorStatus = true;
+
+            email.css('border', '');
+            password.css('border', '');
+
+            if (email.val().trim().length < 1) {
+                email.css('border', '1px solid tomato');
+                errorStatus = false;
+            }
+
+            if (password.val().trim().length < 1) {
+                password.css('border', '1px solid tomato');
+                errorStatus = false;
+            }
+
+            if (errorStatus) {
+                $('#login_form').off('submit').submit();
+            }
+
+        });
+
+        $('#login_form').find('input[name="email"]').on('keyup',function(){
+            let email = $(this);
+//            if(email.val().trim().length < 5){
+//                email.css('border','1px solid tomato');
+//                email.parents('div:eq(0)').find('span:last').show();
+//                email.parents('div:eq(0)').find('span:last').text('Emaili boş saxlamaq olmaz');
+//            }
+//            else{
+//                email.css('border','');
+//                email.parents('div:eq(0)').find('span:last').hide();
+//            }
+            validateFormInput(email.val().trim().length < 5,email,'Emaili boş saxlamaq olmaz');
+            //validateFormInput(validateEmail(email),email,'Email formatı düzgün deyil');
+
+        });
+
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        function validateFormInput(condition,element,messsage){
+            if(condition){
+                element.css('border','1px solid tomato');
+                element.parents('div:eq(0)').find('span:last').show();
+                element.parents('div:eq(0)').find('span:last').text(messsage);
+            }
+            else{
+                element.css('border','');
+                element.parents('div:eq(0)').find('span:last').hide();
+            }
+        }
+
+    </script>
+@endsection
+@section('css')
+    <style>
+        .error-message{
+            border: 1px solid tomato;
+        }
+    </style>
+@endsection
