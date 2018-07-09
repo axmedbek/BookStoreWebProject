@@ -43,7 +43,7 @@
                                             </div><!-- End .swiper-slide -->
 
                                             <div class="swiper-slide swiper-slide-next" style="width: 127px; margin-right: 22px;">
-                                                <a href="#" data-image="{{ asset('images/front/images/products/single/product2.jpg') }}" data-zoom-image="{{  }}" class="product-gallery-item">
+                                                <a href="#" data-image="{{ asset('images/front/images/products/single/product2.jpg') }}" data-zoom-image="{{ asset('images/front/images/products/single/product2.jpg') }}" class="product-gallery-item">
                                                     <img src="assets/images/products/single/thumbs/product2.jpg" alt="product-small-1">
                                                 </a>
                                             </div><!-- End .swiper-slide -->

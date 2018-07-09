@@ -9,6 +9,8 @@
     <meta name="description" content="@yield("description")">
     <meta name="keywords" content="@yield("keywords")">
     <meta name="author" content="Axmedbek">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
@@ -61,6 +63,7 @@
                     <li class="reverse"><a href="#">BİZİMLƏ ƏLAQƏ</a></li>
                 </ul>
             </nav>
+            @admin <a href="{{ route('admin_page',app()->getLocale()) }}" class="btn btn-danger btn-sm" style="margin-top: 2%;margin-left: 4%;">Admin Panel</a> @endadmin
 
             <div class="header-search-container search-dropdown-fix">
                 <a href="#" class="search-dropdown-btn" title="Search Form">

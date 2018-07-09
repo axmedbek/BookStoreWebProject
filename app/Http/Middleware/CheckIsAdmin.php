@@ -16,7 +16,7 @@ class CheckIsAdmin
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user() == null || Auth::user()->role->name == "user"){
+        if (auth()->user() == null || auth()->user()->role->name == "user"){
             return redirect()->route('home_page');
         }
         return $next($request);

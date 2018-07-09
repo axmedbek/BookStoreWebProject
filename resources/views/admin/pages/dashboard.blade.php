@@ -1,5 +1,5 @@
 @extends('admin.base')
-@section('title','Dashboard')
+@section('title',trans('messages.sidebar.dashboard'))
 
 @section('content')
 
@@ -12,7 +12,7 @@
                             <i class="icon-shop2 font-large-2 white"></i>
                         </div>
                         <div class="p-2 bg-cyan white media-body">
-                            <h5>Məhsullar</h5>
+                            <h5>{{ trans('messages.dashboard.card.product') }}</h5>
                             <h5 class="text-bold-400">{{ count(\App\Book::all()) }}</h5>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                             <i class="icon-user1 font-large-2 white"></i>
                         </div>
                         <div class="p-2 bg-deep-orange white media-body">
-                            <h5>İstifadəçilər</h5>
+                            <h5>{{ trans('messages.dashboard.card.users') }}</h5>
                             <h5 class="text-bold-400">{{ count(\App\User::all()) }}</h5>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                             <i class="icon-cart font-large-2 white"></i>
                         </div>
                         <div class="p-2 bg-teal white media-body">
-                            <h5>Sifarişlər</h5>
+                            <h5>{{ trans('messages.dashboard.card.orders') }}</h5>
                             <h5 class="text-bold-400">0</h5>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                             <i class="icon-banknote font-large-2 white"></i>
                         </div>
                         <div class="p-2 bg-pink white media-body">
-                            <h5>Qazanc</h5>
+                            <h5>{{ trans('messages.dashboard.card.income') }}</h5>
                             <h5 class="text-bold-400">0 Azn</h5>
                         </div>
                     </div>

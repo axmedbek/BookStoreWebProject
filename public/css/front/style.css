@@ -18228,7 +18228,7 @@ figure + .ins-meta {
 @media (min-width: 1200px) {
   .col-md-9 .max-col-4 .product-column, .col-md-9
   .max-col-3 .product-column {
-    width: 33.3%;
+    width: 24.3%;
   }
   .col-md-9 .max-col-4 .product-column.wide, .col-md-9
   .max-col-3 .product-column.wide {
@@ -21637,7 +21637,7 @@ figure + .ins-meta {
   overflow: hidden;
   padding-top: 100px;
   padding-bottom: 90px;
-  background-color: #ffde7b;
+  background-color: #ffffff;
   color: #707070;
 }
 
@@ -21715,11 +21715,11 @@ figure + .ins-meta {
 
 @media (min-width: 1200px) and (max-width: 1599px) {
   .error-page .error-page-text > img {
-    max-width: 80%;
+    max-width: 70%;
     -webkit-transform: translateY(-60%);
     -ms-transform: translateY(-60%);
     transform: translateY(-60%);
-    margin-right: -5px;
+    margin-right: 100px;
   }
 }
 

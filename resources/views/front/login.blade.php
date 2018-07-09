@@ -73,108 +73,51 @@
                 <aside class="col-md-3 sidebar">
 
                     <div class="widget">
-                        <h3 class="widget-title">Bestsellers</h3>
+                        <h3 class="widget-title">Ən çox satılanlar</h3>
                         <div class="swiper-container bestsellers-slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="product product-sm">
-                                        <figure>
-                                            <a href="#">
-                                                <img src="assets/images/products/thumbs/product1.jpg" alt="Product">
-                                            </a>
-                                            <span class="product-label discount">-25%</span>
-                                        </figure>
-                                        <div class="product-meta">
-                                            <h5 class="product-title">
-                                                <a href="#">Navy blue silk pleated dress</a>
-                                            </h5>
-                                            <div class="product-price-container">
-                                                <span class="product-price">$250.00</span>
-                                                <span class="product-old-price">$350.00</span>
-                                            </div><!-- End .product-price-container -->
-                                        </div><!-- End .product-meta -->
-                                    </div><!-- End .product -->
-                                    <div class="product product-sm">
-                                        <figure>
-                                            <a href="#">
-                                                <img src="assets/images/products/thumbs/product2.jpg" alt="Product">
-                                            </a>
-                                        </figure>
-                                        <div class="product-meta">
-                                            <h5 class="product-title">
-                                                <a href="#">Mustard yellow ruffle dress</a>
-                                            </h5>
-                                            <div class="product-price-container">
-                                                <span class="product-price">$214.00</span>
-                                            </div><!-- End .product-price-container -->
-                                        </div><!-- End .product-meta -->
-                                    </div><!-- End .product -->
-                                    <div class="product product-sm">
-                                        <figure>
-                                            <a href="#">
-                                                <img src="assets/images/products/thumbs/product3.jpg" alt="Product">
-                                            </a>
-                                        </figure>
-                                        <div class="product-meta">
-                                            <h5 class="product-title">
-                                                <a href="#">Asymmetric crew neck sweater</a>
-                                            </h5>
-                                            <div class="product-price-container">
-                                                <span class="product-price">$1450.00</span>
-                                            </div><!-- End .product-price-container -->
-                                        </div><!-- End .product-meta -->
-                                    </div><!-- End .product -->
+                                    @foreach(\App\Book::all() as $book)
+                                        <div class="product product-sm">
+                                            <figure>
+                                                <a href="#">
+                                                    <img src="{{ asset('images/front/images/book_images/'.$book->book_img) }}" alt="{{ $book->slug }} image">
+                                                </a>
+                                                <span class="product-label discount">-25%</span>
+                                            </figure>
+                                            <div class="product-meta">
+                                                <h5 class="product-title">
+                                                    <a href="#">{{ $book->name }}</a>
+                                                </h5>
+                                                <div class="product-price-container">
+                                                    <span class="product-price">{{ $book->cost }} Azn</span>
+                                                    <span class="product-old-price">{{ $book->cost + 0.5*$book->cost }} Azn</span>
+                                                </div><!-- End .product-price-container -->
+                                            </div><!-- End .product-meta -->
+                                        </div><!-- End .product -->
+                                    @endforeach
                                 </div><!-- End .swiper-slide -->
 
                                 <div class="swiper-slide">
-                                    <div class="product product-sm">
-                                        <figure>
-                                            <a href="#">
-                                                <img src="assets/images/products/thumbs/product4.jpg" alt="Product">
-                                            </a>
-                                        </figure>
-                                        <div class="product-meta">
-                                            <h5 class="product-title">
-                                                <a href="#">Mustard yellow ruffle dress</a>
-                                            </h5>
-                                            <div class="product-price-container">
-                                                <span class="product-price">$180.00</span>
-                                            </div><!-- End .product-price-container -->
-                                        </div><!-- End .product-meta -->
-                                    </div><!-- End .product -->
-                                    <div class="product product-sm">
-                                        <figure>
-                                            <a href="#">
-                                                <img src="assets/images/products/thumbs/product5.jpg" alt="Product">
-                                            </a>
-                                            <span class="product-label new">NEW</span>
-                                        </figure>
-                                        <div class="product-meta">
-                                            <h5 class="product-title">
-                                                <a href="#">Asymmetric crew neck sweater</a>
-                                            </h5>
-                                            <div class="product-price-container">
-                                                <span class="product-price">$160</span>
-                                                <span class="product-old-price">$280.00</span>
-                                            </div><!-- End .product-price-container -->
-                                        </div><!-- End .product-meta -->
-                                    </div><!-- End .product -->
-                                    <div class="product product-sm">
-                                        <figure>
-                                            <a href="#">
-                                                <img src="assets/images/products/thumbs/product6.jpg" alt="Product">
-                                            </a>
-                                        </figure>
-                                        <div class="product-meta">
-                                            <h5 class="product-title">
-                                                <a href="#">Navy blue silk pleated dress</a>
-                                            </h5>
-                                            <div class="product-price-container">
-                                                <span class="product-price">$21.00</span>
-                                                <span class="product-old-price">$300.00</span>
-                                            </div><!-- End .product-price-container -->
-                                        </div><!-- End .product-meta -->
-                                    </div><!-- End .product -->
+                                    @foreach(\App\Book::orderByDesc('id')->get() as $book)
+                                        <div class="product product-sm">
+                                            <figure>
+                                                <a href="#">
+                                                    <img src="{{ asset('images/front/images/book_images/'.$book->book_img) }}" alt="{{ $book->slug }} image">
+                                                </a>
+                                                <span class="product-label discount">-25%</span>
+                                            </figure>
+                                            <div class="product-meta">
+                                                <h5 class="product-title">
+                                                    <a href="#">{{ $book->name }}</a>
+                                                </h5>
+                                                <div class="product-price-container">
+                                                    <span class="product-price">{{ $book->cost }} Azn</span>
+                                                    <span class="product-old-price">{{ $book->cost + 0.5*$book->cost }} Azn</span>
+                                                </div><!-- End .product-price-container -->
+                                            </div><!-- End .product-meta -->
+                                        </div><!-- End .product -->
+                                    @endforeach
                                 </div><!-- End .swiper-slide -->
                             </div><!-- End .swiper-wrapper -->
 
@@ -219,7 +162,7 @@
 
         });
 
-        $('#login_form').find('input[name="email"]').on('keyup',function(){
+        $('#login_form').find('input[name="email"]').on('keyup', function () {
             let email = $(this);
 //            if(email.val().trim().length < 5){
 //                email.css('border','1px solid tomato');
@@ -230,7 +173,7 @@
 //                email.css('border','');
 //                email.parents('div:eq(0)').find('span:last').hide();
 //            }
-            validateFormInput(email.val().trim().length < 5,email,'Emaili boş saxlamaq olmaz');
+            validateFormInput(email.val().trim().length < 5, email, 'Emaili boş saxlamaq olmaz');
             //validateFormInput(validateEmail(email),email,'Email formatı düzgün deyil');
 
         });
@@ -240,14 +183,14 @@
             return re.test(String(email).toLowerCase());
         }
 
-        function validateFormInput(condition,element,messsage){
-            if(condition){
-                element.css('border','1px solid tomato');
+        function validateFormInput(condition, element, messsage) {
+            if (condition) {
+                element.css('border', '1px solid tomato');
                 element.parents('div:eq(0)').find('span:last').show();
                 element.parents('div:eq(0)').find('span:last').text(messsage);
             }
-            else{
-                element.css('border','');
+            else {
+                element.css('border', '');
                 element.parents('div:eq(0)').find('span:last').hide();
             }
         }
@@ -256,7 +199,7 @@
 @endsection
 @section('css')
     <style>
-        .error-message{
+        .error-message {
             border: 1px solid tomato;
         }
     </style>

@@ -5,10 +5,10 @@
         <div class="col-xs-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Kitablar</h4>
+                    <h4 class="card-title">{{ trans('messages.sidebar.books') }}</h4>
 
                     <a type="button" href="javascript:openModal('{{ route('book.add_edit.modal',['book' => 0]) }}')"
-                       class="btn btn-success" style="float: right;">Yeni</a>
+                       class="btn btn-success" style="float: right;"><i class=""></i></a>
                 </div>
                 <div class="card-body collapse in">
                     <div class="table-responsive">
@@ -16,13 +16,13 @@
                             <thead class="bg-primary">
                             <tr>
                                 <th>#</th>
-                                <th>Adı</th>
-                                <th>Şəkili</th>
-                                <th>Kateqoriya</th>
-                                <th>Yazıçı</th>
-                                <th>Qiyməti</th>
-                                <th>Statusu</th>
-                                <th style="float: right;min-width: 170px;">Əməliyyat</th>
+                                <th>{{ trans('messages.books.table.name') }}</th>
+                                <th>{{ trans('messages.books.table.image') }}</th>
+                                <th>{{ trans('messages.books.table.category') }}</th>
+                                <th>{{ trans('messages.books.table.writer') }}</th>
+                                <th>{{ trans('messages.books.table.cost') }}</th>
+                                <th>{{ trans('messages.books.table.status') }}</th>
+                                <th style="float: right;min-width: 170px;">{{ trans('messages.books.table.operation') }}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -67,7 +67,7 @@
     </div>
 
 @endsection
-@section('title','Kitablar')
+@section('title',trans('messages.sidebar.books'))
 @section('css')
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">

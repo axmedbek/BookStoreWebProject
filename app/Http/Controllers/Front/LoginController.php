@@ -19,7 +19,7 @@ class LoginController extends Controller
     public function loginProcess(Request $request)
     {
         $validator = Validator::make($request->all(),[
-            'email' => 'required|string|email|exists:users,email',
+            'email' => 'required|string',
             'password' => 'required|min:6'
         ]);
 

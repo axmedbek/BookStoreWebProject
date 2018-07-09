@@ -71,17 +71,20 @@
                     <li class="nav-item hidden-sm-down"><a href="#" class="nav-link nav-link-expand"><i
                                     class="ficon icon-expand2"></i></a></li>
                 </ul>
+                <a href="{{ route('home_page') }}" class="btn btn-danger btn-sm" style="margin-top: 18px;">Əsas səhifəyə qayıt</a>
                 <ul class="nav navbar-nav float-xs-right">
-                    <li class="dropdown dropdown-language nav-item"><a id="dropdown-flag" href="#"
-                                                                       data-toggle="dropdown" aria-haspopup="true"
-                                                                       aria-expanded="false"
-                                                                       class="dropdown-toggle nav-link"><i
-                                    class="flag-icon flag-icon-gb"></i><span class="selected-language">English</span></a>
-                        <div aria-labelledby="dropdown-flag" class="dropdown-menu"><a href="#" class="dropdown-item"><i
-                                        class="flag-icon flag-icon-gb"></i> English</a><a href="#" class="dropdown-item"><i
-                                        class="flag-icon flag-icon-fr"></i> French</a><a href="#" class="dropdown-item"><i
-                                        class="flag-icon flag-icon-cn"></i> Chinese</a><a href="#" class="dropdown-item"><i
-                                        class="flag-icon flag-icon-de"></i> German</a></div>
+                    <li class="dropdown dropdown-language nav-item">
+                        <select onchange="location = this.value;" class="form-control" style="margin-top: 8%;">
+                            <option value="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(),['locale' => 'az' ]) }}" {{ app()->getLocale() == 'az' ? 'selected' : ''}}>
+                                    Azerbaijan
+                            </option>
+                            <option value="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(),['locale' => 'en' ]) }}" {{ app()->getLocale() == 'en' ? 'selected' : ''}}>
+                                    English
+                            </option>
+                            <option value="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(),['locale' => 'ru' ]) }}" {{ app()->getLocale() == 'ru' ? 'selected' : ''}}>
+                                    Russian
+                            </option>
+                        </select>
                     </li>
                     <li class="dropdown dropdown-notification nav-item"><a href="#" data-toggle="dropdown"
                                                                            class="nav-link nav-link-label"><i
@@ -100,10 +103,12 @@
                                                     class="icon-cart3 icon-bg-circle bg-cyan"></i></div>
                                         <div class="media-body">
                                             <h6 class="media-heading">You have new order!</h6>
-                                            <p class="notification-text font-small-3 text-muted">Lorem ipsum dolor sit amet,
+                                            <p class="notification-text font-small-3 text-muted">Lorem ipsum dolor sit
+                                                amet,
                                                 consectetuer elit.</p>
                                             <small>
-                                                <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">30
+                                                <time datetime="2015-06-11T18:29:20+08:00"
+                                                      class="media-meta text-muted">30
                                                     minutes ago
                                                 </time>
                                             </small>
@@ -115,10 +120,12 @@
                                                     class="icon-monitor3 icon-bg-circle bg-red bg-darken-1"></i></div>
                                         <div class="media-body">
                                             <h6 class="media-heading red darken-1">99% Server load</h6>
-                                            <p class="notification-text font-small-3 text-muted">Aliquam tincidunt mauris eu
+                                            <p class="notification-text font-small-3 text-muted">Aliquam tincidunt
+                                                mauris eu
                                                 risus.</p>
                                             <small>
-                                                <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">
+                                                <time datetime="2015-06-11T18:29:20+08:00"
+                                                      class="media-meta text-muted">
                                                     Five hour ago
                                                 </time>
                                             </small>
@@ -130,10 +137,12 @@
                                                     class="icon-server2 icon-bg-circle bg-yellow bg-darken-3"></i></div>
                                         <div class="media-body">
                                             <h6 class="media-heading yellow darken-3">Warning notifixation</h6>
-                                            <p class="notification-text font-small-3 text-muted">Vestibulum auctor dapibus
+                                            <p class="notification-text font-small-3 text-muted">Vestibulum auctor
+                                                dapibus
                                                 neque.</p>
                                             <small>
-                                                <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">
+                                                <time datetime="2015-06-11T18:29:20+08:00"
+                                                      class="media-meta text-muted">
                                                     Today
                                                 </time>
                                             </small>
@@ -146,7 +155,8 @@
                                         <div class="media-body">
                                             <h6 class="media-heading">Complete the task</h6>
                                             <small>
-                                                <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">
+                                                <time datetime="2015-06-11T18:29:20+08:00"
+                                                      class="media-meta text-muted">
                                                     Last week
                                                 </time>
                                             </small>
@@ -159,7 +169,8 @@
                                         <div class="media-body">
                                             <h6 class="media-heading">Generate monthly report</h6>
                                             <small>
-                                                <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">
+                                                <time datetime="2015-06-11T18:29:20+08:00"
+                                                      class="media-meta text-muted">
                                                     Last month
                                                 </time>
                                             </small>
@@ -184,7 +195,8 @@
                             <li class="list-group scrollable-container"><a href="javascript:void(0)"
                                                                            class="list-group-item">
                                     <div class="media">
-                                        <div class="media-left"><span class="avatar avatar-sm avatar-online rounded-circle"><img
+                                        <div class="media-left"><span
+                                                    class="avatar avatar-sm avatar-online rounded-circle"><img
                                                         src="{{ asset('images/admin/portrait/small/avatar-s-1.png') }}"
                                                         alt="avatar"><i></i></span></div>
                                         <div class="media-body">
@@ -192,7 +204,8 @@
                                             <p class="notification-text font-small-3 text-muted">I like your portfolio,
                                                 let's start the project.</p>
                                             <small>
-                                                <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">
+                                                <time datetime="2015-06-11T18:29:20+08:00"
+                                                      class="media-meta text-muted">
                                                     Today
                                                 </time>
                                             </small>
@@ -209,7 +222,8 @@
                                             <p class="notification-text font-small-3 text-muted">I have seen your work,
                                                 there is</p>
                                             <small>
-                                                <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">
+                                                <time datetime="2015-06-11T18:29:20+08:00"
+                                                      class="media-meta text-muted">
                                                     Tuesday
                                                 </time>
                                             </small>
@@ -217,15 +231,18 @@
                                     </div>
                                 </a><a href="javascript:void(0)" class="list-group-item">
                                     <div class="media">
-                                        <div class="media-left"><span class="avatar avatar-sm avatar-online rounded-circle"><img
+                                        <div class="media-left"><span
+                                                    class="avatar avatar-sm avatar-online rounded-circle"><img
                                                         src="{{ asset('images/admin/portrait/small/avatar-s-3.png') }}"
                                                         alt="avatar"><i></i></span></div>
                                         <div class="media-body">
                                             <h6 class="media-heading">Carie Berra</h6>
-                                            <p class="notification-text font-small-3 text-muted">Can we have call in this
+                                            <p class="notification-text font-small-3 text-muted">Can we have call in
+                                                this
                                                 week ?</p>
                                             <small>
-                                                <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">
+                                                <time datetime="2015-06-11T18:29:20+08:00"
+                                                      class="media-meta text-muted">
                                                     Friday
                                                 </time>
                                             </small>
@@ -239,10 +256,12 @@
                                                         alt="avatar"><i></i></span></div>
                                         <div class="media-body">
                                             <h6 class="media-heading">Eric Alsobrook</h6>
-                                            <p class="notification-text font-small-3 text-muted">We have project party this
+                                            <p class="notification-text font-small-3 text-muted">We have project party
+                                                this
                                                 saturday night.</p>
                                             <small>
-                                                <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">
+                                                <time datetime="2015-06-11T18:29:20+08:00"
+                                                      class="media-meta text-muted">
                                                     last month
                                                 </time>
                                             </small>
@@ -257,7 +276,8 @@
                     <li class="dropdown dropdown-user nav-item"><a href="#" data-toggle="dropdown"
                                                                    class="dropdown-toggle nav-link dropdown-user-link"><span
                                     class="avatar avatar-online"><img
-                                        src="{{ asset('images/front/images/profile_images/'.auth()->user()->profile_img) }}" alt="avatar"><i></i></span><span
+                                        src="{{ asset('images/front/images/profile_images/'.auth()->user()->profile_img) }}"
+                                        alt="avatar"><i></i></span><span
                                     class="user-name">{{ auth()->user()->name." ".auth()->user()->surname }}</span></a>
                         <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item"><i
                                         class="icon-head"></i> Edit Profile</a><a href="#" class="dropdown-item"><i

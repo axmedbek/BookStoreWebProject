@@ -41,8 +41,9 @@ Route::get('/publisher/{publisher_name}', 'Admin\PublisherController@delete')->n
 
 //admin routes
 
-Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
-    Route::get('/{locale}', 'Admin\DashboardController@index')->name('admin_page');
+Route::group(['prefix' => '{locale?}/admin', 'middleware' => 'admin'], function ($locale = 'az') {
+
+    Route::get('/', 'Admin\DashboardController@index')->name('admin_page')->middleware('admin');
 
     Route::get('/msk/cities', 'Admin\Msk\CityController@index')->name('msk_cities');
     Route::post('/msk/cities/save', 'Admin\Msk\CityController@save')->name('msk_cities.save');
@@ -79,6 +80,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::post('/book/delete', 'Admin\BookController@deleteBook')->name('book.delete');
 
     Route::get('/users', 'Admin\UsersController@index')->name('users.admin');
+    Route::get('/orders', 'Admin\OrdersController@index')->name('orders.admin');
 
 
 });

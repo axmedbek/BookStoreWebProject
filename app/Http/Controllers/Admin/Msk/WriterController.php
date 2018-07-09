@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Validator;
 
 class WriterController extends Controller
 {
-    public function index(){
+    public function index($locale = 'az'){
+        app()->setLocale($locale);
         $writers = Writer::all();
         return view('admin.pages.msk.writers',compact('writers'));
     }

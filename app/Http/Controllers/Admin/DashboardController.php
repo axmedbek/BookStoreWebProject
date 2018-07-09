@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\App;
 
 class DashboardController extends Controller
 {
-    public function index($locale){
-        App::setLocale($locale);
+    public function index($locale = 'az'){
+        app()->setLocale($locale);
         return view('admin.pages.dashboard');
     }
 }

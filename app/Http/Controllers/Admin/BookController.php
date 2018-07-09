@@ -14,8 +14,9 @@ use Intervention\Image\Facades\Image;
 
 class BookController extends Controller
 {
-    public function index()
+    public function index($locale = 'az')
     {
+        app()->setLocale($locale);
         $books = Book::all();
         return view('admin.pages.books.books', compact('books'));
     }
